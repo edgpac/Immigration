@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Card } from './ui/card';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -51,45 +50,57 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-muted/20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-20 bg-background">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="inline-flex items-center gap-2 mb-4">
+            <HelpCircle className="w-8 h-8 text-primary" />
+          </div>
+          <h2 className="text-4xl font-bold mb-3">Frequently Asked Questions</h2>
           <p className="text-muted-foreground">
             Click any question to see the answer
           </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2">
           {faqs.map((faq, index) => (
-            <Card
+            <div
               key={index}
-              className="overflow-hidden hover:shadow-md transition-shadow"
+              className={`border border-border rounded-lg overflow-hidden transition-all duration-300 ${
+                openIndex === index ? 'bg-muted/20' : 'bg-background hover:bg-muted/10'
+              }`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-muted/30 transition-colors"
+                className="w-full px-6 py-4 flex items-center justify-between text-left group"
               >
-                <h3 className="font-semibold text-base pr-4">{faq.question}</h3>
+                <span className="font-semibold text-base pr-4 group-hover:text-primary transition-colors">
+                  {faq.question}
+                </span>
                 <ChevronDown
-                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? 'transform rotate-180' : ''
+                  className={`w-5 h-5 flex-shrink-0 text-primary transition-all duration-300 ${
+                    openIndex === index ? 'rotate-180' : 'group-hover:translate-y-0.5'
                   }`}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
+                className={`grid transition-all duration-300 ease-in-out ${
+                  openIndex === index 
+                    ? 'grid-rows-[1fr] opacity-100' 
+                    : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
-                <div className="px-6 py-4 bg-muted/20 border-t border-border">
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {faq.answer}
-                  </p>
+                <div className="overflow-hidden">
+                  <div className="px-6 pb-5 pt-1">
+                    <div className="h-px bg-border mb-4" />
+                    <p className="text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
