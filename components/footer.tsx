@@ -58,11 +58,21 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© {currentYear} Cabo Immigration Services. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-primary transition">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition">Terms of Service</a>
+        <div className="border-t border-border pt-8 text-sm text-muted-foreground">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-3">
+            <p>© {currentYear} Cabo Immigration Services. All rights reserved.</p>
+            <div className="flex gap-4 mt-4 md:mt-0">
+              <a href="#" className="hover:text-primary transition">Privacy Policy</a>
+              <a href="#" className="hover:text-primary transition">Terms of Service</a>
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-xs text-muted-foreground/70">
+              To hire the architect of this website call{' '}
+              <a href="tel:+526121698328" className="hover:text-primary transition">
+                +52 612 169 8328
+              </a>
+            </p>
           </div>
         </div>
       </div>
