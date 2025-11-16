@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { ServiceSelectionStep } from './ui/form-steps/service-selection-step';
-import { PersonalInfoStep } from './ui/form-steps/personal-info-step';
-import { ImmigrationDetailsStep } from './ui/form-steps/immigration-details-step';
-import { DocumentUploadStep } from './ui/form-steps/document-upload-step';
-import { ReviewStep } from './ui/form-steps/review-step';
-import { SuccessStep } from './ui/form-steps/success-step';
+import { ServiceSelectionStep } from './form-steps/service-selection-step';
+import { PersonalInfoStep } from './form-steps/personal-info-step';
+import { ImmigrationDetailsStep } from './form-steps/immigration-details-step';
+import { DocumentUploadStep } from './form-steps/document-upload-step';
+import { ReviewStep } from './form-steps/review-step';
+import { SuccessStep } from './form-steps/success-step';
 
 interface ImmigrationFormWizardProps {
   onClose: () => void;
