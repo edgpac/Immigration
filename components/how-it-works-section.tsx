@@ -1,6 +1,6 @@
 'use client';
 
-import { Card } from '@/components/ui/card';
+import { Card } from './ui/card';
 import { CheckCircle2, FormInput, FileCheck, Flag } from 'lucide-react';
 
 export function HowItWorksSection() {

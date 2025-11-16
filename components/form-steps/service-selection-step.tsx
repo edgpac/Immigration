@@ -1,6 +1,6 @@
 'use client';
 
-import { Card } from '@/components/ui/card';
+import { Card } from '../ui/card';
 import { Calendar, Home, Briefcase, RefreshCw } from 'lucide-react';
 
 interface ServiceSelectionStepProps {

@@ -1,6 +1,6 @@
 'use client';
 
-import { Card } from '@/components/ui/card';
+import { Card } from './ui/card';
 import { Star, Shield, Clock } from 'lucide-react';
 
 export function TrustSection() {

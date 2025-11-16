@@ -1,8 +1,8 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '../ui/button';
 import { CheckCircle2, Download, Mail, Calendar } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { Card } from '../ui/card';
 
 interface SuccessStepProps {
   onClose: () => void;
