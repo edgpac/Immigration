@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Home } from 'lucide-react';
 import { ServiceSelectionStep } from './form-steps/service-selection-step';
 import { PersonalInfoStep } from './form-steps/personal-info-step';
 import { ImmigrationDetailsStep } from './form-steps/immigration-details-step';
@@ -68,19 +68,16 @@ export function ImmigrationFormWizard({ onClose }: ImmigrationFormWizardProps) {
 
   const handleNext = async () => {
     if (currentStep === steps.length - 1) {
-      // Submit form
       setIsSubmitting(true);
       setError(null);
 
       try {
         const submitFormData = new FormData();
         
-        // Add text fields
         Object.entries(formData).forEach(([key, value]) => {
           submitFormData.append(key, value);
         });
 
-        // Add files
         if (uploadedFiles.passportPhoto) {
           submitFormData.append('passportPhoto', uploadedFiles.passportPhoto);
         }
@@ -128,7 +125,7 @@ export function ImmigrationFormWizard({ onClose }: ImmigrationFormWizardProps) {
   };
 
   if (submissionComplete) {
-    return <SuccessStep onClose={onClose} />;
+    return <SuccessStep onClose={onClose} userEmail={formData.email} />;
   }
 
   return (
@@ -139,12 +136,23 @@ export function ImmigrationFormWizard({ onClose }: ImmigrationFormWizardProps) {
             <h1 className="text-3xl font-bold">Immigration Application</h1>
             <p className="text-muted-foreground mt-1">Step {currentStep + 1} of {steps.length}</p>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-muted rounded-lg transition"
-          >
-            <X size={24} />
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={onClose}
+              className="flex items-center gap-2 px-4 py-2 hover:bg-muted rounded-lg transition text-sm font-medium"
+              title="Return to homepage"
+            >
+              <Home size={18} />
+              <span className="hidden sm:inline">Back to Home</span>
+            </button>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-muted rounded-lg transition"
+              title="Close application"
+            >
+              <X size={24} />
+            </button>
+          </div>
         </div>
 
         {/* Progress Bar */}
