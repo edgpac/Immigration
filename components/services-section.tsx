@@ -46,7 +46,7 @@ export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -61,7 +61,7 @@ export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
                   </div>
                 </div>
 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2">
                   {service.points.map((point, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm">
                       <div className="w-1.5 h-1.5 bg-secondary rounded-full" />
@@ -69,16 +69,23 @@ export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
                     </div>
                   ))}
                 </div>
-
-                <Button
-                  onClick={onStartApplication}
-                  className="w-full bg-primary hover:bg-primary/90"
-                >
-                  Start Application
-                </Button>
               </Card>
             );
           })}
+        </div>
+
+        {/* Single Start Application Button */}
+        <div className="text-center">
+          <Button
+            onClick={onStartApplication}
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-12 py-6"
+          >
+            Start Application
+          </Button>
+          <p className="text-sm text-muted-foreground mt-4">
+            Choose your service type in the next step
+          </p>
         </div>
       </div>
     </section>
