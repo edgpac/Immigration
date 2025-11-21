@@ -146,7 +146,7 @@ export function FloatingContactButtons() {
                     <Bot size={16} className="text-primary" />
                   </div>
                   <div className="max-w-[85%]">
-                    <div className="text-xs text-muted-foreground mb-1 ml-1">Cabo Immigration Services</div>
+                    <div className="text-xs text-muted-foreground mb-1 ml-1">Cabo Immigration Assistant</div>
                     <div className="bg-white border border-border rounded-2xl rounded-bl-none shadow-sm p-3">
                       <p className="text-sm">¡Hola! 👋 I'm your immigration assistant for Los Cabos.</p>
                       <p className="text-sm mt-2">I can help you with:</p>
@@ -173,7 +173,7 @@ export function FloatingContactButtons() {
                   )}
                   <div className={`max-w-[85%] ${msg.role === 'user' ? 'order-1' : 'order-2'}`}>
                     {msg.role === 'assistant' && (
-                      <div className="text-xs text-muted-foreground mb-1 ml-1">Cabo Immigration Services</div>
+                      <div className="text-xs text-muted-foreground mb-1 ml-1">Cabo Immigration Assistant</div>
                     )}
                     <div className={`p-3 rounded-2xl text-sm ${
                       msg.role === 'user' 
@@ -220,7 +220,7 @@ export function FloatingContactButtons() {
                 </button>
               </div>
               <div className="mt-2 text-xs text-center text-muted-foreground">
-                Powered by Cabo Immigration • For consultation: +52 624 125 9640
+                • For consultation: +52 624 125 9640
               </div>
             </div>
           </div>
