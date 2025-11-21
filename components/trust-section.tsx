@@ -93,33 +93,33 @@ function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
 function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const reviews = [
     {
-      text: "Cabo Immigration Services made the entire process seamless. What I thought would take months was completed in weeks. Highly recommended!",
-      author: "Maria Garcia",
-      status: "Temporary Resident since 2023",
+      text: "Cabo Immigration Services made the entire process seamless. What I thought would take months was completed efficiently. Highly recommended!",
+      author: "Maria G.",
+      status: "Temporary Resident",
       rating: 5
     },
     {
-      text: "The team was incredibly knowledgeable about the local INM office procedures. They accompanied me to my appointment and everything went smoothly. Worth every peso!",
-      author: "John Anderson",
-      status: "Permanent Resident since 2024",
+      text: "The team was incredibly knowledgeable about the local INM office procedures. They accompanied me to my appointment and everything went smoothly.",
+      author: "John A.",
+      status: "Permanent Resident",
       rating: 5
     },
     {
       text: "As a digital nomad, I was worried about getting work authorization. They explained everything clearly and handled all the paperwork. Now I'm legally working from paradise!",
-      author: "Sarah Chen",
-      status: "Temporary Resident with Work Permit, 2024",
+      author: "Sarah C.",
+      status: "Temporary Resident with Work Permit",
       rating: 5
     },
     {
       text: "After struggling on my own with forms in Spanish, I found these guys. Their smart form system saved me so much time and stress. They caught errors I didn't even know I had made.",
-      author: "Robert Martinez",
-      status: "Temporary Resident since 2023",
+      author: "Robert M.",
+      status: "Temporary Resident",
       rating: 5
     },
     {
       text: "Professional, responsive, and they know the Cabo INM office inside and out. They even helped me when my card was delayed due to a system issue. Can't recommend them enough!",
-      author: "Emma Thompson",
-      status: "Permanent Resident since 2025",
+      author: "Emma T.",
+      status: "Permanent Resident",
       rating: 5
     }
   ];
@@ -190,22 +190,22 @@ export function TrustSection() {
   const trustPoints = [
     {
       icon: Star,
-      title: '10+ Years Experience',
-      description: 'Successfully helped over 500 families establish residency in Cabo San Lucas',
+      title: 'Extensive Experience',
+      description: 'Successfully helped numerous families and individuals establish residency in Cabo San Lucas',
       details: {
-        overview: 'With over a decade of specialized experience in Mexican immigration, we\'ve navigated every type of visa scenario, from straightforward temporary residency to complex work permit situations. Our team has processed applications through multiple Mexican consulates worldwide and knows the nuances of each location.',
+        overview: 'With extensive specialized experience in Mexican immigration, we\'ve navigated every type of visa scenario, from straightforward temporary residency to complex work permit situations. Our team has processed applications through multiple Mexican consulates worldwide and understands the nuances of each location.',
         benefits: [
           'Deep understanding of INM (Instituto Nacional de Migración) procedures and requirements',
-          'Established relationships with local INM offices in Cabo San Lucas and La Paz',
+          'Established working relationships with local INM offices in Cabo San Lucas and La Paz',
           'Experience with all visa types: temporary, permanent, work permits, family reunification',
-          'Knowledge of recent 2025 policy changes and financial requirement updates',
-          'Track record of 95%+ approval rate on properly prepared applications',
-          'Familiarity with common pitfalls and how to avoid them'
+          'Knowledge of recent policy changes and financial requirement updates',
+          'Strong track record with properly prepared applications',
+          'Familiarity with common pitfalls and proven strategies to avoid them'
         ],
         examples: [
-          'Helped a retired couple from Canada obtain permanent residency after 4 years of temporary status, guiding them through each renewal and the final conversion process.',
+          'Helped a retired couple from Canada obtain permanent residency after their temporary status period, guiding them through each renewal and the final conversion process.',
           'Successfully assisted a digital nomad secure work authorization while maintaining temporary residency, ensuring full compliance with INM regulations.',
-          'Guided a family of 5 through the entire process from initial consulate appointment in the US to receiving their resident cards in Cabo - all completed in 6 weeks.'
+          'Guided a family through the entire process from initial consulate appointment to receiving their resident cards in Cabo - completed within normal processing timeframes.'
         ]
       }
     },
@@ -214,39 +214,39 @@ export function TrustSection() {
       title: 'INM-Registered Consultants',
       description: 'Licensed immigration advisors familiar with Cabo\'s local INM office procedures',
       details: {
-        overview: 'Our consultants are officially registered with the Instituto Nacional de Migración, which means we operate under strict professional standards and are authorized to represent clients in official immigration matters. This registration is not automatic - it requires proven expertise, background checks, and ongoing compliance with INM regulations.',
+        overview: 'Our consultants are officially registered with the Instituto Nacional de Migración, which means we operate under strict professional standards and are authorized to represent clients in official immigration matters. This registration requires proven expertise, background checks, and ongoing compliance with INM regulations.',
         benefits: [
           'Authorized to accompany you to INM appointments and represent your interests',
           'Direct communication channels with INM officers for status updates',
           'Up-to-date training on the latest immigration law changes and procedures',
-          'Professional liability insurance for your protection',
-          'Ability to expedite requests and resolve complications directly with INM',
+          'Professional accountability standards for your protection',
+          'Ability to work directly with INM to resolve complications',
           'Bilingual staff fluent in both Spanish legal terminology and English explanations'
         ],
         examples: [
-          'When a client\'s temporary resident card was delayed due to a system error, our INM registration allowed us to contact the office directly and resolve the issue within 48 hours instead of weeks.',
-          'Successfully argued for a client whose financial documentation was initially rejected, providing additional context that INM accepted based on our professional standing.',
-          'Coordinated with the Cabo INM office to schedule appointments during their busiest season, leveraging our registered status to secure times that would have been unavailable to walk-ins.'
+          'When a client\'s temporary resident card was delayed due to a system error, our INM registration allowed us to contact the office directly and resolve the issue quickly.',
+          'Successfully provided additional documentation and context for a client whose financial paperwork was initially questioned, leveraging our professional standing.',
+          'Coordinated with the Cabo INM office to schedule appointments efficiently, utilizing our registered status to navigate busy seasons.'
         ]
       }
     },
     {
       icon: Clock,
-      title: 'Save 5+ Hours',
-      description: 'Our smart forms eliminate repetitive data entry and reduce application errors by 80%',
+      title: 'Save Significant Time',
+      description: 'Our smart forms eliminate repetitive data entry and dramatically reduce application errors',
       details: {
         overview: 'Mexican immigration requires submitting the same information across multiple forms, often in Spanish. Our proprietary system collects your information once and automatically populates all necessary INM forms, consulate applications, and supporting documents. This technology, developed from years of processing applications, catches common errors before submission.',
         benefits: [
-          'Answer questions once - we fill out all 15+ required forms automatically',
+          'Answer questions once - we fill out all required forms automatically',
           'Built-in validation prevents the most common application errors',
-          'Spanish translation of your information done correctly the first time',
+          'Spanish translation of your information done correctly',
           'Automatic checklist generation based on your specific visa type',
           'Digital document organization that INM officers can easily review',
           'Real-time progress tracking so you know exactly where you stand'
         ],
         examples: [
-          'A client applying for temporary residency would normally spend 6-8 hours filling out forms in Spanish. Our system reduced this to 45 minutes of answering questions in English, with all forms generated automatically.',
-          'Prevented a $54 consulate fee loss by catching that a client\'s bank statements didn\'t meet the 6-month requirement before they scheduled their appointment.',
+          'Clients applying for temporary residency typically spend many hours filling out forms in Spanish. Our system reduces this to a simplified question-and-answer process in English, with all forms generated automatically.',
+          'Prevented costly consulate appointment issues by identifying that a client\'s bank statements didn\'t meet requirements before they scheduled their appointment.',
           'Automatically identified that a work permit applicant needed their employer\'s INM registration number, saving a trip back to the office and potential appointment rescheduling.'
         ]
       }
