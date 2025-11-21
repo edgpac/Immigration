@@ -2,7 +2,7 @@
 
 import { Button } from './ui/button';
 import { Card } from './ui/card';
-import { Calendar, Home, Briefcase, RefreshCw } from 'lucide-react';
+import { Calendar, Home, Briefcase, RefreshCw, Shield, Lock } from 'lucide-react';
 
 interface ServicesSectionProps {
   onStartApplication: () => void;
@@ -46,6 +46,28 @@ export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
           </p>
         </div>
 
+        {/* Privacy Notice */}
+        <div className="max-w-3xl mx-auto mb-12">
+          <div className="bg-green-50 border border-green-200 rounded-lg p-6 flex items-start gap-4">
+            <div className="p-3 bg-green-100 rounded-lg">
+              <Shield className="w-6 h-6 text-green-600" />
+            </div>
+            <div>
+              <h3 className="font-bold text-green-900 mb-2 flex items-center gap-2">
+                <Lock className="w-4 h-4" />
+                Your Information is Secure & Confidential
+              </h3>
+              <p className="text-sm text-green-800 leading-relaxed">
+                We take your privacy seriously. All personal information submitted through our application process is encrypted using 
+                industry-standard SSL/TLS protocols and stored securely. We comply with Mexican privacy laws (Ley Federal de Protección 
+                de Datos Personales) and maintain strict confidentiality. Your data will only be used to process your immigration application 
+                and will never be shared with third parties without your explicit consent. Our team handles your sensitive documents 
+                with the highest level of professional discretion.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -86,6 +108,12 @@ export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
           <p className="text-sm text-muted-foreground mt-4">
             Choose your service type in the next step
           </p>
+          
+          {/* Security Badge */}
+          <div className="flex items-center justify-center gap-2 mt-6 text-xs text-muted-foreground">
+            <Lock className="w-3 h-3 text-green-600" />
+            <span>Secure & Confidential - Protected by SSL Encryption</span>
+          </div>
         </div>
       </div>
     </section>
