@@ -10,6 +10,7 @@ import { TrustSection } from '../components/trust-section';
 import { FAQSection } from '../components/faq-section';
 import { FinalCTASection } from '../components/final-cta-section';
 import { Footer } from '../components/footer';
+import { FloatingContactButtons } from '../components/floating-contact-buttons';
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -33,6 +34,9 @@ export default function Home() {
           <ImmigrationFormWizard onClose={() => setShowForm(false)} />
         </div>
       )}
+
+      {/* Floating Contact Buttons - Always Visible */}
+      <FloatingContactButtons />
     </main>
   );
 }
