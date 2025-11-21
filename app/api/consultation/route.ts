@@ -5,7 +5,27 @@ export async function POST(req: NextRequest) {
   try {
     const { name, email, phone, preferredDate, message } = await req.json();
 
-    // Create email transporter using your existing environment variables
+    // DEBUG: Check if environment variables are loaded
+    console.log('Environment variables check:', {
+      emailExists: !!process.env.IMMIGRATION_EMAIL,
+      passwordExists: !!process.env.IMMIGRATION_APP_PASSWORD,
+      email: process.env.IMMIGRATION_EMAIL,
+      passwordLength: process.env.IMMIGRATION_APP_PASSWORD?.length
+    });
+
+    // Validate environment variables
+    if (!process.env.IMMIGRATION_EMAIL || !process.env.IMMIGRATION_APP_PASSWORD) {
+      console.error('Missing environment variables!');
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: 'Server configuration error. Please contact support.' 
+        },
+        { status: 500 }
+      );
+    }
+
+    // Create email transporter
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
@@ -14,7 +34,14 @@ export async function POST(req: NextRequest) {
         user: process.env.IMMIGRATION_EMAIL,
         pass: process.env.IMMIGRATION_APP_PASSWORD,
       },
+      debug: true, // Enable debug output
+      logger: true // Log to console
     });
+
+    // Verify transporter configuration
+    console.log('Verifying SMTP connection...');
+    await transporter.verify();
+    console.log('SMTP connection verified successfully');
 
     // Format the preferred date
     const formattedDate = preferredDate 
@@ -29,7 +56,7 @@ export async function POST(req: NextRequest) {
     // Email content
     const mailOptions = {
       from: process.env.IMMIGRATION_EMAIL,
-      to: process.env.IMMIGRATION_EMAIL, // Send to the same email
+      to: process.env.IMMIGRATION_EMAIL,
       subject: `New Consultation Request - ${name}`,
       html: `
         <!DOCTYPE html>
@@ -106,16 +133,32 @@ Please contact this client within 24 hours to schedule their consultation.
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    console.log('Sending email...');
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.messageId);
 
     return NextResponse.json({ 
       success: true, 
       message: 'Consultation request sent successfully' 
     });
-  } catch (error) {
-    console.error('Error sending consultation email:', error);
+
+  } catch (error: any) {
+    // Detailed error logging
+    console.error('Full error details:', {
+      message: error.message,
+      code: error.code,
+      command: error.command,
+      response: error.response,
+      responseCode: error.responseCode,
+      stack: error.stack
+    });
+
+    // Return user-friendly error
     return NextResponse.json(
-      { success: false, message: 'Failed to send consultation request' },
+      { 
+        success: false, 
+        message: 'Failed to send consultation request. Please call us at 624 125 9640 or email chatscalendar@gmail.com directly.' 
+      },
       { status: 500 }
     );
   }
