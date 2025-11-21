@@ -309,31 +309,25 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  onClick={onStartApplication}
-                  size="lg"
-                  className="bg-secondary hover:bg-secondary/90 text-white font-semibold"
-                >
-                  Start Your Application
-                </Button>
-                <Button
                   size="lg"
                   onClick={() => setConsultationModalOpen(true)}
-                  className="bg-accent hover:bg-accent/90 text-white font-semibold"
+                  className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6"
                 >
                   Schedule Consultation
                 </Button>
                 <Button
                   size="lg"
                   onClick={() => setContactModalOpen(true)}
-                  className="bg-white/20 hover:bg-white/30 text-white font-semibold border border-white/30"
+                  className="bg-white/20 hover:bg-white/30 text-white font-semibold border-2 border-white/40 text-lg px-8 py-6"
                 >
                   Contact Info
                 </Button>
               </div>
             </div>
 
+            {/* Right column - Image with Gold Border */}
             <div className="relative">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
+              <div className="rounded-lg overflow-hidden shadow-2xl border-2 border-yellow-500/30">
                 <img
                   src="https://res.cloudinary.com/dgixosra8/image/upload/v1763263448/Screenshot_2025-11-15_at_8.23.59_PM_qknvdk.png"
                   alt="Beautiful Cabo San Lucas beach at sunset"
