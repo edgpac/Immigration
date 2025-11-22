@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: 'Cabo Immigration Services | Mexican Residency & Work Permits - Cabo San Lucas',
     template: '%s | Cabo Immigration Services'
   },
-  description: 'Expert Mexican immigration services in Cabo San Lucas. Temporary residency (residente temporal), permanent residency (residente permanente), work permits, and visa assistance. INM-registered consultants with 10+ years experience. Fast, reliable, affordable immigration help in Baja California Sur.',
+  description: 'Expert Mexican immigration services in Cabo San Lucas. Temporary residency (residente temporal), permanent residency (residente permanente), work permits, and visa assistance. INM-registered consultants with extensive experience. Fast, reliable, affordable immigration help in Baja California Sur.',
   keywords: [
     // Core Services
     'Cabo San Lucas immigration',
@@ -128,8 +128,7 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/favicon.ico',
       },
     ],
     apple: '/apple-icon.png',
@@ -140,7 +139,7 @@ export const metadata: Metadata = {
     alternateLocale: 'es_MX',
     url: 'https://cabo-immigration-services.vercel.app',
     title: 'Cabo Immigration Services - Mexican Residency & Work Permits',
-    description: 'Professional immigration assistance in Cabo San Lucas. Temporary residency, permanent residency, work permits. INM-registered consultants. 10+ years experience.',
+    description: 'Professional immigration assistance in Cabo San Lucas. Temporary residency, permanent residency, work permits. INM-registered consultants with extensive experience.',
     siteName: 'Cabo Immigration Services',
     images: [
       {
@@ -217,6 +216,7 @@ export default function RootLayout({
                 "longitude": "-109.9167"
               },
               "telephone": "+52-624-125-9640",
+              "email": "caboresidencycard@outlook.com",
               "priceRange": "$$",
               "openingHoursSpecification": [
                 {
