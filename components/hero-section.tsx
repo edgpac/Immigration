@@ -329,7 +329,7 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-2xl border-2 border-yellow-500/30">
                 <img
-                  src="https://res.cloudinary.com/dhwnr1pa5/image/upload/v1763848829/immi_d2xupt.png"
+                  src="/immi.png"
                   alt="Beautiful Cabo San Lucas beach at sunset"
                   className="w-full h-auto object-cover"
                 />
