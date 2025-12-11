@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
@@ -13,13 +13,24 @@ interface HeaderProps {
 export function Header({ onStartApplication }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const isHomepage = pathname === '/';
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
     if (!isHomepage) {
-      // Navigate to homepage first, then scroll
       window.location.href = `/#${id}`;
       return;
     }
@@ -42,13 +53,10 @@ export function Header({ onStartApplication }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            {/* Services Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
+            {/* Services Dropdown - CLICK BASED */}
+            <div className="relative" ref={dropdownRef}>
               <button 
+                onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center gap-1 text-sm hover:text-primary transition"
               >
                 Services
@@ -56,10 +64,10 @@ export function Header({ onStartApplication }: HeaderProps) {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg py-2">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
                   <Link 
                     href="/services" 
-                    className="block px-4 py-2 text-sm hover:bg-muted transition"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold">All Services</div>
@@ -68,7 +76,7 @@ export function Header({ onStartApplication }: HeaderProps) {
                   <div className="border-t border-border my-1" />
                   <Link 
                     href="/services/temporary-residency" 
-                    className="block px-4 py-2 text-sm hover:bg-muted transition"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold">Temporary Residency</div>
@@ -76,7 +84,7 @@ export function Header({ onStartApplication }: HeaderProps) {
                   </Link>
                   <Link 
                     href="/services/permanent-residency" 
-                    className="block px-4 py-2 text-sm hover:bg-muted transition"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold">Permanent Residency</div>
@@ -84,7 +92,7 @@ export function Header({ onStartApplication }: HeaderProps) {
                   </Link>
                   <Link 
                     href="/services/work-permits" 
-                    className="block px-4 py-2 text-sm hover:bg-muted transition"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
                     <div className="font-semibold">Work Permits</div>
@@ -135,10 +143,10 @@ export function Header({ onStartApplication }: HeaderProps) {
           <nav className="md:hidden pb-4 space-y-3">
             <Link 
               href="/services" 
-              className="block w-full text-left py-2 text-sm hover:text-primary"
+              className="block w-full text-left py-2 text-sm hover:text-primary font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Services
+              All Services
             </Link>
             <Link 
               href="/services/temporary-residency" 
