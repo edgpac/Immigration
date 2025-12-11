@@ -11,12 +11,15 @@ import { FAQSection } from '../components/faq-section';
 import { FinalCTASection } from '../components/final-cta-section';
 import { Footer } from '../components/footer';
 import { FloatingContactButtons } from '../components/floating-contact-buttons';
-import Head from 'next/head';
+// ❌ COMMENTED OUT: Next.js 15 App Router doesn't use <Head> - all metadata is in layout.tsx
+// import Head from 'next/head';
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
 
   // Structured Data for SEO
+  // ⚠️ NOTE: This Organization schema is now in layout.tsx to avoid duplication
+  // Keeping this here in case it's referenced elsewhere in your code
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -225,7 +228,30 @@ export default function Home() {
 
   return (
     <>
-      {/* SEO Meta Tags and Structured Data */}
+      {/* ⚠️⚠️⚠️ CRITICAL SEO FIX ⚠️⚠️⚠️
+          
+          The <Head> component below is COMMENTED OUT because:
+          1. Next.js 15 App Router doesn't support <Head> from 'next/head'
+          2. All metadata is now handled in app/layout.tsx
+          3. This was creating duplicate/conflicting metadata
+          4. Search engines were confused by two sets of metadata
+          
+          What was moved to layout.tsx:
+          - Meta title & description
+          - OpenGraph tags
+          - Twitter tags  
+          - All other meta tags
+          
+          What stays here:
+          - FAQ structured data (page-specific)
+          
+          If you need to add page-specific metadata in the future:
+          - Export metadata object from this page
+          - See Next.js 15 docs: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+      */}
+      
+      {/* COMMENTED OUT - DOES NOT WORK IN NEXT.JS 15 APP ROUTER */}
+      {/*
       <Head>
         <title>Los Cabos Immigration Services | Susana Rapini | Mexican Visa & Residency Expert in Cabo San Lucas</title>
         <meta 
@@ -240,7 +266,6 @@ export default function Home() {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.loscabosimmigration.com/" />
         <meta property="og:title" content="Los Cabos Immigration Services | Susana Rapini | Mexican Visa & Residency Expert" />
@@ -249,20 +274,17 @@ export default function Home() {
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Los Cabos Immigration Services" />
         
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://www.loscabosimmigration.com/" />
         <meta name="twitter:title" content="Los Cabos Immigration Services | Susana Rapini | Mexican Visa Expert" />
         <meta name="twitter:description" content="Expert Mexican immigration services in Cabo San Lucas by Susana Rapini. Temporary residency, permanent residency, work permits." />
         <meta name="twitter:image" content="https://www.loscabosimmigration.com/twitter-image.jpg" />
         
-        {/* Geographic Tags */}
         <meta name="geo.region" content="MX-BCS" />
         <meta name="geo.placename" content="Cabo San Lucas" />
         <meta name="geo.position" content="22.8905;-109.9167" />
         <meta name="ICBM" content="22.8905, -109.9167" />
         
-        {/* Business Information */}
         <meta name="business:contact_data:street_address" content="Boulevard Lázaro Cárdenas 1625" />
         <meta name="business:contact_data:locality" content="Cabo San Lucas" />
         <meta name="business:contact_data:region" content="Baja California Sur" />
@@ -270,49 +292,47 @@ export default function Home() {
         <meta name="business:contact_data:country_name" content="Mexico" />
         <meta name="business:contact_data:phone_number" content="+52-624-125-9640" />
         
-        {/* Language and Content */}
         <meta httpEquiv="content-language" content="en-US" />
         <meta name="language" content="English" />
         
-        {/* Canonical URL */}
         <link rel="canonical" href="https://www.loscabosimmigration.com/" />
         
-        {/* Alternate Languages (if you add Spanish version) */}
         <link rel="alternate" hrefLang="en" href="https://www.loscabosimmigration.com/" />
         <link rel="alternate" hrefLang="es" href="https://www.loscabosimmigration.com/es/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.loscabosimmigration.com/" />
         
-        {/* Structured Data - Organization & Business */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         
-        {/* Structured Data - FAQ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
         />
         
-        {/* Preconnect to Important Domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* Favicon and App Icons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
         
-        {/* Theme Color */}
         <meta name="theme-color" content="#5D1A1F" />
         <meta name="msapplication-TileColor" content="#5D1A1F" />
         
-        {/* Verification Tags (add your actual verification codes) */}
         <meta name="google-site-verification" content="your-google-verification-code" />
         <meta name="facebook-domain-verification" content="your-facebook-verification-code" />
       </Head>
+      */}
+
+      {/* ✅ WORKING: FAQ Structured Data (Page-Specific Schema) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
 
       <main 
         className="min-h-screen bg-background"
