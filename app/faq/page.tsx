@@ -218,7 +218,7 @@ export default function FAQPage() {
                 Call: 624 125 9640
               </a>
               <button
-                onClick={() => {}}
+                
                 className="inline-block bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded-lg font-semibold text-lg transition"
               >
                 Schedule Consultation
