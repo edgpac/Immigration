@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header onStartApplication={() => {}} />
+      <Header />
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-accent py-20">
@@ -151,7 +151,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Reuse existing components */}
-      <ServicesSection onStartApplication={() => {}} />
+      <ServicesSection />
       <HowItWorksSection />
       <TrustSection />
       <FinalCTASection onStartApplication={() => {}} />

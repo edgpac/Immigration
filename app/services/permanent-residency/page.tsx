@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function PermanentResidencyPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header onStartApplication={() => {}} />
+      <Header />
       
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-accent py-20">
