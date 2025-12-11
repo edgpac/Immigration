@@ -48,17 +48,6 @@ export default function SusanaRapiniPage() {
                 <div className="bg-card rounded-lg overflow-hidden border shadow-lg sticky top-8">
                   <div className="aspect-square bg-primary/10 flex items-center justify-center">
                     <div className="text-center p-8">
-                      <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <Users className="w-16 h-16 text-primary" />
-                      </div>
-                      <h3 className="font-bold text-xl mb-2">Susana Rapini</h3>
-                      <p className="text-sm text-muted-foreground">Immigration Consultant</p>
-                    </div>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm">Cabo San Lucas, BCS</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Award className="w-5 h-5 text-primary flex-shrink-0" />
@@ -78,7 +67,7 @@ export default function SusanaRapiniPage() {
                 </h2>
                 
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Susana Rapini is a licensed immigration consultant registered with Mexico's Instituto Nacional de Migración (INM), specializing in residency and work authorization processes for foreign nationals in Los Cabos and throughout Baja California Sur. With over 15 years of dedicated experience in Mexican immigration law, Susana has helped thousands of expatriates successfully navigate the complex requirements of temporary residency, permanent residency, work permits, and visa renewals.
+                  Susana Rapini is a certified translator for an immigration consultant and registered with Mexico's Instituto Nacional de Migración (INM), specializing in residency and work authorization processes for foreign nationals in Los Cabos and throughout Baja California Sur. With over 15 years of dedicated experience in Mexican immigration law, Susana has helped thousands of expatriates successfully navigate the complex requirements of temporary residency, permanent residency, work permits, and visa renewals.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-6">
