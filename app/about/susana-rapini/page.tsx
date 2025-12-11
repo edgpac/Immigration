@@ -250,7 +250,7 @@ export default function SusanaRapiniPage() {
 
       {/* Reuse Components */}
       <TrustSection />
-      <FinalCTASection onStartApplication={() => {}} />
+      <FinalCTASection />
       
       <Footer />
     </div>

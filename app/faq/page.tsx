@@ -229,7 +229,7 @@ export default function FAQPage() {
       </section>
 
       {/* Final CTA */}
-      <FinalCTASection onStartApplication={() => {}} />
+      <FinalCTASection />
       
       <Footer />
     </div>

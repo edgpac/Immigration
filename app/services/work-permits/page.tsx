@@ -287,7 +287,7 @@ export default function WorkPermitsPage() {
       {/* Reuse Components */}
       <HowItWorksSection />
       <TrustSection />
-      <FinalCTASection onStartApplication={() => {}} />
+      <FinalCTASection />
       
       <Footer />
     </div>

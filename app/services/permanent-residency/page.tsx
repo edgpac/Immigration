@@ -300,7 +300,7 @@ export default function PermanentResidencyPage() {
       {/* Reuse Components */}
       <HowItWorksSection />
       <TrustSection />
-      <FinalCTASection onStartApplication={() => {}} />
+      <FinalCTASection />
       
       <Footer />
     </div>

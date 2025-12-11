@@ -252,7 +252,7 @@ export default function TemporaryResidencyPage() {
       {/* Reuse Components */}
       <HowItWorksSection />
       <TrustSection />
-      <FinalCTASection onStartApplication={() => {}} />
+      <FinalCTASection />
       
       <Footer />
     </div>

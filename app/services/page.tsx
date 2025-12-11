@@ -154,7 +154,7 @@ export default function ServicesPage() {
       <ServicesSection />
       <HowItWorksSection />
       <TrustSection />
-      <FinalCTASection onStartApplication={() => {}} />
+      <FinalCTASection />
       
       <Footer />
     </div>
