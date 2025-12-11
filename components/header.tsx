@@ -70,7 +70,7 @@ export function Header({ onStartApplication }: HeaderProps) {
                     className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="font-semibold">All Services</div>
+                    <div className="font-semibold">Services Overview</div>
                     <div className="text-xs text-muted-foreground">Overview of our services</div>
                   </Link>
                   <div className="border-t border-border my-1" />
