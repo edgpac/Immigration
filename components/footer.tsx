@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { MapPin, Phone, Clock } from 'lucide-react';
 
 export function Footer() {
@@ -10,14 +11,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
               <img 
                 src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png" 
                 alt="Cabo Immigration Services" 
                 className="h-8 w-auto"
               />
               <span className="font-bold">Cabo Immigration Services</span>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Expert immigration services for Cabo San Lucas, Mexico
             </p>
@@ -26,10 +27,36 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-4 text-primary">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#services" className="hover:text-primary transition">Services</a></li>
-              <li><a href="#how-it-works" className="hover:text-primary transition">How It Works</a></li>
-              <li><a href="#faq" className="hover:text-primary transition">FAQ</a></li>
-              <li><a href="#about" className="hover:text-primary transition">About Us</a></li>
+              <li>
+                <Link href="/services" className="hover:text-primary transition">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/temporary-residency" className="hover:text-primary transition">
+                  Temporary Residency
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/permanent-residency" className="hover:text-primary transition">
+                  Permanent Residency
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/work-permits" className="hover:text-primary transition">
+                  Work Permits
+                </Link>
+              </li>
+              <li>
+                <Link href="/about/susana-rapini" className="hover:text-primary transition">
+                  About Susana
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:text-primary transition">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
