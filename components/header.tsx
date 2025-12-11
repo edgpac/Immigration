@@ -45,10 +45,10 @@ export function Header({ onStartApplication }: HeaderProps) {
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
             <img 
               src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png" 
-              alt="Cabo Immigration Services" 
+              alt="Los Cabos Immigration Services" 
               className="h-10 w-auto"
             />
-            <span className="font-bold text-lg hidden sm:inline">Cabo Immigration Services</span>
+            <span className="font-bold text-lg hidden sm:inline">Los Cabos Immigration Services</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
           <div class="container">
             <div class="header">
               <h2>🎯 New Consultation Request</h2>
-              <p>Cabo Immigration Services</p>
+              <p>Los Cabos Immigration Services</p>
             </div>
             <div class="content">
               <div class="field">
@@ -117,7 +117,7 @@ export async function POST(req: NextRequest) {
         </html>
       `,
       text: `
-New Consultation Request - Cabo Immigration Services
+New Consultation Request - Los Cabos Immigration Services
 
 Name: ${name}
 Email: ${email}

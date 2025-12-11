@@ -93,7 +93,7 @@ function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
 function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const reviews = [
     {
-      text: "Cabo Immigration Services made the entire process seamless. What I thought would take months was completed efficiently. Highly recommended!",
+      text: "Los Cabos Immigration Services made the entire process seamless. What I thought would take months was completed efficiently. Highly recommended!",
       author: "Maria G.",
       status: "Temporary Resident",
       rating: 5
@@ -269,7 +269,7 @@ export function TrustSection() {
       <section id="about" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Cabo Immigration Services?</h2>
+            <h2 className="text-4xl font-bold mb-4">Why Choose Los Cabos Immigration Services?</h2>
             <p className="text-sm text-muted-foreground">
               Click any card to learn more about our expertise
             </p>

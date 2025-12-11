@@ -14,10 +14,10 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
               <img 
                 src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png" 
-                alt="Cabo Immigration Services" 
+                alt="Los Cabos Immigration Services" 
                 className="h-8 w-auto"
               />
-              <span className="font-bold">Cabo Immigration Services</span>
+              <span className="font-bold">Los Cabos Immigration Services</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Expert immigration services for Cabo San Lucas, Mexico
@@ -88,7 +88,7 @@ export function Footer() {
         <div className="border-t border-border pt-8 text-sm text-muted-foreground">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <p>© {currentYear} Cabo Immigration Services. All rights reserved.</p>
+              <p>© {currentYear} Los Cabos Immigration Services. All rights reserved.</p>
               <p className="text-xs text-muted-foreground/70 mt-1">
                 To hire the architect of this website call{' '}
                 <a href="tel:+526121698328" className="hover:text-primary transition">

@@ -28,8 +28,8 @@ const SITE_URL = 'https://www.loscabosimmigration.com';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Cabo Immigration Services | Mexican Residency & Work Permits - Cabo San Lucas',
-    template: '%s | Cabo Immigration Services'
+    default: 'Los Cabos Immigration Services | Mexican Residency & Work Permits - Cabo San Lucas',
+    template: '%s | Los Cabos Immigration Services'
   },
   // ✅ FIXED: Shortened from 290 to 188 characters for better search display
   description: 'Licensed immigration consultant in Cabo San Lucas. Temporary & permanent residency, work permits, visa renewals. INM-registered, 15+ years experience. Bilingual support.',
@@ -122,9 +122,9 @@ export const metadata: Metadata = {
     'INM appointments Cabo',
     'Susana Rapini immigration',
   ],
-  authors: [{ name: 'Cabo Immigration Services' }],
-  creator: 'Cabo Immigration Services',
-  publisher: 'Cabo Immigration Services',
+  authors: [{ name: 'Los Cabos Immigration Services' }],
+  creator: 'Los Cabos Immigration Services',
+  publisher: 'Los Cabos Immigration Services',
   formatDetection: {
     email: false,
     address: false,
@@ -151,9 +151,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     alternateLocale: 'es_MX',
     url: SITE_URL, // ✅ FIXED: Using consistent domain constant
-    title: 'Cabo Immigration Services - Mexican Residency & Work Permits',
+    title: 'Los Cabos Immigration Services - Mexican Residency & Work Permits',
     description: 'Licensed immigration consultant in Cabo San Lucas. Temporary & permanent residency, work permits, visa renewals. INM-registered, 15+ years experience.',
-    siteName: 'Cabo Immigration Services',
+    siteName: 'Los Cabos Immigration Services',
     images: [
       {
         url: 'https://res.cloudinary.com/dgixosra8/image/upload/v1763263448/Screenshot_2025-11-15_at_8.23.59_PM_qknvdk.png',
@@ -165,7 +165,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cabo Immigration Services - Mexican Residency Experts',
+    title: 'Los Cabos Immigration Services - Mexican Residency Experts',
     description: 'Licensed INM consultant. Temporary & permanent residency, work permits in Cabo San Lucas. Fast, reliable, bilingual support.',
     images: ['https://res.cloudinary.com/dgixosra8/image/upload/v1763263448/Screenshot_2025-11-15_at_8.23.59_PM_qknvdk.png'],
   },
@@ -216,7 +216,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "Cabo Immigration Services",
+              "name": "Los Cabos Immigration Services",
               "image": "https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png",
               "description": "Expert immigration services for Cabo San Lucas. Temporary residency, permanent residency, work permits, and visa assistance.",
               "address": {

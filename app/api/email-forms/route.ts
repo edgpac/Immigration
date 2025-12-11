@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     const mailOptions = {
       from: process.env.IMMIGRATION_EMAIL,
       to: userEmail,
-      subject: 'Your Immigration Forms Package - Cabo Immigration Services',
+      subject: 'Your Immigration Forms Package - Los Cabos Immigration Services',
       html: `
         <!DOCTYPE html>
         <html>
@@ -42,12 +42,12 @@ export async function POST(req: NextRequest) {
           <div class="container">
             <div class="header">
               <h2>🎯 Your Immigration Forms Are Ready!</h2>
-              <p>Cabo Immigration Services</p>
+              <p>Los Cabos Immigration Services</p>
             </div>
             <div class="content">
               <div class="success-box">
                 <h3 style="margin-top: 0;">✓ Application Successfully Submitted</h3>
-                <p>Thank you for choosing Cabo Immigration Services. Your immigration packet has been prepared and is attached to this email.</p>
+                <p>Thank you for choosing Los Cabos Immigration Services. Your immigration packet has been prepared and is attached to this email.</p>
               </div>
 
               <h3>📦 What's Included:</h3>
@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
 
               <p style="margin-top: 30px; color: #666; font-size: 14px; text-align: center;">
                 Questions? Reply to this email or call us at 624 125 9640<br>
-                <strong>Cabo Immigration Services</strong><br>
+                <strong>Los Cabos Immigration Services</strong><br>
                 Your Trusted Immigration Partner in Cabo San Lucas
               </p>
             </div>
@@ -101,9 +101,9 @@ export async function POST(req: NextRequest) {
       text: `
 Your Immigration Forms Are Ready!
 
-Cabo Immigration Services
+Los Cabos Immigration Services
 
-Thank you for choosing Cabo Immigration Services. Your immigration packet has been prepared.
+Thank you for choosing Los Cabos Immigration Services. Your immigration packet has been prepared.
 
 What's Included:
 ✓ Form FMM-1 (Migratory Form) - Pre-filled
@@ -124,7 +124,7 @@ immigration application and will never be shared with third parties.
 
 Questions? Call us at 624 125 9640
 
-Cabo Immigration Services
+Los Cabos Immigration Services
 Your Trusted Immigration Partner in Cabo San Lucas
       `,
     };

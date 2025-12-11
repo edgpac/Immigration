@@ -203,7 +203,7 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
         <div className="sticky top-0 bg-background border-b p-6 flex justify-between items-start">
           <div>
             <h3 className="text-2xl font-bold">Contact Us</h3>
-            <p className="text-sm text-muted-foreground mt-1">Cabo Immigration Services Office</p>
+            <p className="text-sm text-muted-foreground mt-1">Los Cabos Immigration Services Office</p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-muted rounded-lg transition">
             <X className="w-5 h-5" />

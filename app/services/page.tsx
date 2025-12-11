@@ -45,7 +45,7 @@ export default function ServicesPage() {
             </h2>
             
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Whether you're relocating to Cabo San Lucas for retirement, pursuing work opportunities, or establishing permanent roots in Baja California Sur, navigating Mexican immigration law can feel overwhelming. Cabo Immigration Services simplifies the entire process with licensed INM-registered consultants who specialize in the specific procedures and requirements of the local Los Cabos immigration office.
+              Whether you're relocating to Cabo San Lucas for retirement, pursuing work opportunities, or establishing permanent roots in Baja California Sur, navigating Mexican immigration law can feel overwhelming. Los Cabos Immigration Services simplifies the entire process with licensed INM-registered consultants who specialize in the specific procedures and requirements of the local Los Cabos immigration office.
             </p>
 
             <p className="text-muted-foreground leading-relaxed mb-6">

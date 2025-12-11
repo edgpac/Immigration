@@ -22,7 +22,7 @@ This package contains:
 4. Preparation Guide
 
 Questions? Call 624 125 9640
-Cabo Immigration Services
+Los Cabos Immigration Services
     `);
 
     const zipContent = await zip.generateAsync({ type: 'nodebuffer' });
