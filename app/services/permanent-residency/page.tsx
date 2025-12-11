@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Header } from '../../../../components/header'
-import { Footer } from '../../../../components/footer'
-import { HowItWorksSection } from '../../../../components/how-it-works-section'
-import { TrustSection } from '../../../../components/trust-section'
-import { FinalCTASection } from '../../../../components/final-cta-section'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { HowItWorksSection } from '@/components/how-it-works-section'
+import { TrustSection } from '@/components/trust-section'
+import { FinalCTASection } from '@/components/final-cta-section'
 import { Home, DollarSign, Infinity, Clock, CheckCircle2, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {

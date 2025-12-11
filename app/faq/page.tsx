@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Header } from '../../../components/header'
-import { Footer } from '../../../components/footer'
-import { FinalCTASection } from '../../../components/final-cta-section'
-import { FAQSection } from '../../../components/faq-section'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { FinalCTASection } from '@/components/final-cta-section'
+import { FAQSection } from '@/components/faq-section'
 import { HelpCircle, Search } from 'lucide-react'
 
 export const metadata: Metadata = {

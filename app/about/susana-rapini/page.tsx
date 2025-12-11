@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Header } from '../../../../components/header'
-import { Footer } from '../../../../components/footer'
-import { TrustSection } from '../../../../components/trust-section'
-import { FinalCTASection } from '../../../../components/final-cta-section'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { TrustSection } from '@/components/trust-section'
+import { FinalCTASection } from '@/components/final-cta-section'
 import { Award, MapPin, Languages, GraduationCap, Users, Heart } from 'lucide-react'
 import Image from 'next/image'
 
