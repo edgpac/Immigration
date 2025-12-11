@@ -253,7 +253,10 @@ export default function RootLayout({
                 },
                 "geoRadius": "50000"
               },
-              "sameAs": [],
+              "sameAs": [
+                "https://www.facebook.com/loscabosimmigration",
+                "https://www.instagram.com/loscabosimmigration"
+              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Immigration Services",
