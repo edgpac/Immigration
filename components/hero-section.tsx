@@ -302,7 +302,7 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                Los Cabos<br />INM Services<br />Visa & Residency
+                Los Cabos<br />Immigration Services<br />Expert INM Consultants
               </h1>
               <p className="text-xl mb-8 text-white/90">
                 Expert assistance for temporary residency, permanent residency, and work permits in Cabo San Lucas
