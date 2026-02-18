@@ -1,0 +1,381 @@
+{
+  "header": {
+    "brandName": "Los Cabos Immigration Services",
+    "services": "Servicios",
+    "servicesOverview": "Resumen de Servicios",
+    "servicesOverviewDesc": "Descripci\u00f3n general de nuestros servicios",
+    "temporaryResidency": "Residencia Temporal",
+    "temporaryResidencyDesc": "Permisos de 1 a 4 a\u00f1os",
+    "permanentResidency": "Residencia Permanente",
+    "permanentResidencyDesc": "Estatus de por vida",
+    "workPermits": "Permisos de Trabajo",
+    "workPermitsDesc": "Autorizaci\u00f3n de empleo",
+    "howItWorks": "C\u00f3mo Funciona",
+    "aboutSusana": "Acerca de Susana",
+    "faq": "Preguntas Frecuentes",
+    "startApplication": "Iniciar Solicitud",
+    "contactUs": "Cont\u00e1ctenos",
+    "allServices": "Todos los Servicios",
+    "langToggle": "EN"
+  },
+  "hero": {
+    "h1Line1": "Los Cabos",
+    "h1Line2": "Servicios de",
+    "h1Line3": "Inmigraci\u00f3n INM",
+    "subtitle": "Asistencia experta para residencia temporal, residencia permanente y permisos de trabajo en Cabo San Lucas",
+    "scheduleConsultation": "Programar Consulta",
+    "contactInfo": "Informaci\u00f3n de Contacto",
+    "contact": {
+      "title": "Cont\u00e1ctenos",
+      "subtitle": "Oficina de Los Cabos Immigration Services",
+      "officeLocation": "Ubicaci\u00f3n de la Oficina",
+      "phone": "Tel\u00e9fono",
+      "officeHours": "Horario de Oficina",
+      "monFri": "Lunes - Viernes",
+      "monFriHours": "8 AM \u2013 3 PM MST",
+      "saturday": "S\u00e1bado",
+      "sunday": "Domingo",
+      "closed": "Cerrado",
+      "getDirections": "C\u00f3mo Llegar",
+      "close": "Cerrar"
+    }
+  },
+  "consultation": {
+    "title": "Programar una Consulta",
+    "subtitle": "Te responderemos en menos de 24 horas",
+    "fullName": "Nombre Completo *",
+    "namePlaceholder": "Tu nombre completo",
+    "email": "Correo Electr\u00f3nico *",
+    "emailPlaceholder": "tu.correo@ejemplo.com",
+    "phone": "N\u00famero de Tel\u00e9fono *",
+    "phonePlaceholder": "+52 624 123 4567",
+    "preferredDate": "Fecha Preferida para la Consulta",
+    "message": "Cu\u00e9ntanos sobre tus necesidades migratorias",
+    "messagePlaceholder": "\u00bfQu\u00e9 tipo de residencia te interesa? \u00bfTienes alguna pregunta espec\u00edfica?",
+    "successMessage": "\u2713 \u00a1Solicitud de consulta enviada! Te contactaremos en menos de 24 horas.",
+    "errorMessage": "\u2717 Algo sali\u00f3 mal. Int\u00e9ntalo de nuevo o ll\u00e1manos al 624 125 9640.",
+    "sending": "Enviando...",
+    "submit": "Programar Consulta",
+    "cancel": "Cancelar"
+  },
+  "services": {
+    "title": "Nuestros Servicios de Inmigraci\u00f3n",
+    "subtitle": "Procesos simplificados para vivir y trabajar en M\u00e9xico",
+    "startApplication": "Iniciar Solicitud",
+    "chooseNextStep": "Elige tu tipo de servicio en el siguiente paso",
+    "secureLabel": "Seguro y Confidencial - Protegido con Cifrado SSL",
+    "items": [
+      {
+        "title": "Residencia Temporal",
+        "description": "V\u00e1lida de 1 a 4 a\u00f1os con autorizaci\u00f3n de trabajo opcional. Perfecta para jubilados, trabajadores remotos y quienes est\u00e1n probando la vida en M\u00e9xico.",
+        "points": ["Validez de 1 a 4 a\u00f1os", "Proceso renovable", "Permiso de trabajo disponible"]
+      },
+      {
+        "title": "Residencia Permanente",
+        "description": "Vive en M\u00e9xico indefinidamente con plenos derechos laborales. No se necesitan renovaciones despu\u00e9s de la aprobaci\u00f3n.",
+        "points": ["Sin fecha de vencimiento", "Autorizaci\u00f3n de trabajo autom\u00e1tica", "Camino a la ciudadan\u00eda"]
+      },
+      {
+        "title": "Permisos de Trabajo y Empleo",
+        "description": "Autorizaci\u00f3n legal para trabajadores extranjeros. Gestionamos el registro del empleador y la documentaci\u00f3n del empleado.",
+        "points": ["Apoyo para patrocinio del empleador", "Documentaci\u00f3n de oferta de trabajo", "Registro en INM"]
+      },
+      {
+        "title": "Renovaciones y Actualizaciones",
+        "description": "Mant\u00e9n tu estatus al d\u00eda sin penalizaciones. Seguimos los plazos y gestionamos el papeleo.",
+        "points": ["Sistema de recordatorio de 30 d\u00edas", "Notificaciones de cambio de domicilio", "Evita multas y retrasos"]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Proceso Simple en 4 Pasos",
+    "subtitle": "Nuestro enfoque simplificado hace que la inmigraci\u00f3n sea f\u00e1cil",
+    "clickHint": "Haz clic en cualquier tarjeta para conocer los requisitos, plazos y costos detallados",
+    "learnMore": "M\u00e1s Informaci\u00f3n \u2192",
+    "gotIt": "\u00a1Entendido, gracias!",
+    "modal": {
+      "timeline": "\u23f1\ufe0f Tiempo",
+      "requirements": "\ud83d\udccb Requisitos",
+      "keyFacts": "\ud83d\udca1 Datos Clave",
+      "costs": "\ud83d\udcb0 Costos"
+    },
+    "steps": [
+      {
+        "title": "Elige Tu Servicio",
+        "description": "Selecciona residencia temporal, permanente o permiso de trabajo",
+        "details": {
+          "timeline": "La cita en el consulado generalmente se puede programar con 2 a 4 semanas de anticipaci\u00f3n. Proceso inicial total: 1 a 2 meses.",
+          "requirements": [
+            "Pasaporte v\u00e1lido con al menos 6 meses de vigencia",
+            "Prueba de solvencia econ\u00f3mica: $27,000 USD en saldo bancario (\u00faltimos 12 meses) O $1,620 USD de ingresos mensuales (\u00faltimos 6 meses)",
+            "Formulario de solicitud de visa completado",
+            "Foto reciente tama\u00f1o pasaporte (fondo blanco)",
+            "Cuota de cita consular: $54 USD (no reembolsable)"
+          ],
+          "keyFacts": [
+            "La residencia temporal permite estad\u00edas de hasta 4 a\u00f1os antes de la elegibilidad para residencia permanente",
+            "El permiso de trabajo debe solicitarse por separado, a menos que est\u00e9s casado con un ciudadano mexicano",
+            "El INM (Instituto Nacional de Migraci\u00f3n) procesa todas las solicitudes de residencia",
+            "Los residentes temporales deben notificar al INM los cambios de domicilio dentro de 90 d\u00edas",
+            "Los \u2018turistas perpetuos\u2019 (que salen cada 180 d\u00edas) enfrentan mayor aplicaci\u00f3n de la ley y multas"
+          ],
+          "costs": "Visa consular: $54 USD | Tarjeta de residente temporal (1 a\u00f1o): 3,000-5,570 MXN (~$175-$325 USD) | Tarjeta de residente permanente: 6,789 MXN (~$400 USD)"
+        }
+      },
+      {
+        "title": "Completa el Formulario Inteligente",
+        "description": "Responde preguntas una vez - llenamos todos los formularios de inmigraci\u00f3n mexicana por ti",
+        "details": {
+          "timeline": "Ventana de 30 d\u00edas despu\u00e9s de recibir la visa para completar el proceso en M\u00e9xico. Emisi\u00f3n de tarjeta: el mismo d\u00eda o hasta 1 semana seg\u00fan la oficina del INM.",
+          "requirements": [
+            "Visa de residente temporal aprobada por el consulado mexicano",
+            "FMM (Forma Migratoria M\u00faltiple) recibida en el aeropuerto/frontera",
+            "Pasaporte original con sello de visa",
+            "Comprobante de entrada legal a M\u00e9xico",
+            "Pago por la tarjeta de residente (var\u00eda seg\u00fan la duraci\u00f3n: 1-4 a\u00f1os)",
+            "Datos biom\u00e9tricos (huellas dactilares y fotograf\u00eda en la oficina del INM)"
+          ],
+          "keyFacts": [
+            "Proceso CANJE: canje de tu visa por tarjeta de residente en la oficina local del INM",
+            "Se requieren citas en la mayor\u00eda de las oficinas del INM - planifica con anticipaci\u00f3n",
+            "Trae todos los documentos originales m\u00e1s fotocopias",
+            "El proceso puede durar de 3 a 6 horas en la oficina del INM",
+            "La tarjeta vence en la fecha indicada en formato DD/MM/YYYY",
+            "Ventana de renovaci\u00f3n: hasta 30 d\u00edas antes del vencimiento (o 55 d\u00edas si est\u00e1s fuera de M\u00e9xico)"
+          ],
+          "costs": "Las tarifas de renovaci\u00f3n anual var\u00edan seg\u00fan la duraci\u00f3n de la tarjeta. Adici\u00f3n de permiso de trabajo: ~1,780 MXN. Tarjeta de reemplazo si se pierde: ~600 MXN m\u00e1s requisitos de nueva foto."
+        }
+      },
+      {
+        "title": "Revisa y Descarga",
+        "description": "Revisa formularios completados, sube documentos de apoyo, obt\u00e9n tu lista personalizada",
+        "details": {
+          "timeline": "Preparaci\u00f3n de documentos: 1-2 semanas. Apostilla/legalizaci\u00f3n: 2-4 semanas adicionales si se requiere.",
+          "requirements": [
+            "Acta de nacimiento (apostillada si es de pa\u00eds no hispanohablante)",
+            "Acta de matrimonio si aplica (apostillada)",
+            "Certificado de antecedentes penales del pa\u00eds de residencia",
+            "Comprobante de ingresos: extractos bancarios de 6 meses o carta de empleo",
+            "Documentaci\u00f3n de seguro m\u00e9dico (recomendado)",
+            "Carta de oferta de trabajo con detalles salariales si solicitas permiso de trabajo",
+            "Diplomas/certificados educativos si se requieren para el trabajo"
+          ],
+          "keyFacts": [
+            "Los documentos en idiomas distintos al espa\u00f1ol deben ser traducidos oficialmente",
+            "Los requisitos de apostilla var\u00edan seg\u00fan el pa\u00eds - consulta con el consulado",
+            "Las copias digitales generalmente se aceptan inicialmente; originales en la cita",
+            "Los documentos financieros deben mostrar ingresos mensuales o ahorros consistentes",
+            "El registro del empleador en el INM es necesario antes de solicitar el permiso de trabajo",
+            "Guarda copias de todo - el INM puede solicitar documentaci\u00f3n adicional"
+          ],
+          "costs": "Servicios de apostilla: $20-50 USD por documento | Traducci\u00f3n profesional: $25-40 USD por p\u00e1gina | Verificaci\u00f3n de antecedentes: $20-50 USD dependiendo del pa\u00eds"
+        }
+      },
+      {
+        "title": "Env\u00eda y Rastrea",
+        "description": "Env\u00eda al INM con nuestra orientaci\u00f3n o reserva una consulta para asistencia personalizada",
+        "details": {
+          "timeline": "Aprobaci\u00f3n de permiso de trabajo por el INM: 20-30 d\u00edas h\u00e1biles. Emisi\u00f3n de visa por el consulado: 10 d\u00edas h\u00e1biles. Total: 1-2 meses para permisos de trabajo.",
+          "requirements": [
+            "El empleador debe estar registrado en el INM (constancia de inscripci\u00f3n de empleador)",
+            "NUT (N\u00famero \u00danico de Tr\u00e1mite) emitido por el INM al empleador",
+            "Contrato de trabajo firmado en espa\u00f1ol con detalles del puesto y salario",
+            "Prueba de que el puesto requiere experiencia extranjera",
+            "Documentos de registro de la empresa e informaci\u00f3n fiscal",
+            "Carta en la que el empleador reconoce cubrir los gastos de viaje"
+          ],
+          "keyFacts": [
+            "El empleador inicia el proceso del permiso de trabajo - los empleados no pueden solicitarlo por s\u00ed mismos",
+            "Los permisos de trabajo est\u00e1n vinculados a un empleador espec\u00edfico - cambiar de trabajo requiere una nueva solicitud",
+            "La visa de trabajo temporal es v\u00e1lida hasta 4 a\u00f1os, renovable anualmente",
+            "Despu\u00e9s de 4 a\u00f1os consecutivos, eres elegible para la residencia permanente",
+            "Los residentes permanentes pueden trabajar libremente sin permisos adicionales",
+            "Las visas de turista no se pueden convertir en permisos de trabajo - debes salir de M\u00e9xico y volver a solicitar",
+            "Los n\u00f3madas digitales que trabajan para empresas no mexicanas t\u00e9cnicamente necesitan autorizaci\u00f3n de trabajo"
+          ],
+          "costs": "Registro del empleador en INM: var\u00eda seg\u00fan el tama\u00f1o de la empresa | Adici\u00f3n de autorizaci\u00f3n de trabajo a la tarjeta de residente: 1,780 MXN (~$105 USD) | Asistencia legal (opcional): $500-2,000 USD"
+        }
+      }
+    ]
+  },
+  "trust": {
+    "title": "\u00bfPor Qu\u00e9 Elegir Los Cabos Immigration Services?",
+    "clickHint": "Haz clic en cualquier tarjeta para conocer m\u00e1s sobre nuestra experiencia",
+    "learnMore": "M\u00e1s Informaci\u00f3n \u2192",
+    "readReviews": "Leer Rese\u00f1as de Clientes",
+    "modal": {
+      "whatThisMeans": "Lo que Esto Significa para Ti",
+      "keyBenefits": "Beneficios Clave",
+      "realExamples": "Ejemplos Reales",
+      "close": "Cerrar"
+    },
+    "reviewsModal": {
+      "title": "Rese\u00f1as de Clientes",
+      "subtitle": "Lo que dicen nuestros clientes sobre nosotros",
+      "closeReviews": "Cerrar Rese\u00f1as"
+    },
+    "points": [
+      {
+        "title": "Amplia Experiencia",
+        "description": "Hemos ayudado exitosamente a numerosas familias e individuos a establecer su residencia en Cabo San Lucas",
+        "details": {
+          "overview": "Con amplia experiencia especializada en inmigraci\u00f3n mexicana, hemos navegado todo tipo de escenarios de visa, desde residencia temporal sencilla hasta situaciones complejas de permisos de trabajo. Nuestro equipo ha procesado solicitudes a trav\u00e9s de m\u00faltiples consulados mexicanos en todo el mundo y comprende las particularidades de cada ubicaci\u00f3n.",
+          "benefits": [
+            "Profundo conocimiento de los procedimientos y requisitos del INM (Instituto Nacional de Migraci\u00f3n)",
+            "Relaciones de trabajo establecidas con las oficinas locales del INM en Cabo San Lucas y La Paz",
+            "Experiencia con todos los tipos de visa: temporal, permanente, permisos de trabajo, reunificaci\u00f3n familiar",
+            "Conocimiento de cambios recientes en pol\u00edticas y actualizaciones de requisitos financieros",
+            "S\u00f3lido historial con solicitudes correctamente preparadas",
+            "Familiaridad con trampas comunes y estrategias probadas para evitarlas"
+          ],
+          "examples": [
+            "Ayudamos a una pareja de jubilados de Canad\u00e1 a obtener la residencia permanente despu\u00e9s de su per\u00edodo de residencia temporal, gui\u00e1ndolos a trav\u00e9s de cada renovaci\u00f3n y el proceso de conversi\u00f3n final.",
+            "Asistimos exitosamente a un n\u00f3mada digital a obtener autorizaci\u00f3n de trabajo mientras manten\u00eda la residencia temporal, asegurando el pleno cumplimiento de las regulaciones del INM.",
+            "Guiamos a una familia a trav\u00e9s de todo el proceso desde la cita inicial en el consulado hasta recibir sus tarjetas de residente en Cabo, completado dentro de los plazos de procesamiento normales."
+          ]
+        }
+      },
+      {
+        "title": "Consultores Registrados en el INM",
+        "description": "Asesores de inmigraci\u00f3n con licencia familiarizados con los procedimientos de la oficina local del INM en Cabo",
+        "details": {
+          "overview": "Nuestros consultores est\u00e1n oficialmente registrados con el Instituto Nacional de Migraci\u00f3n, lo que significa que operamos bajo estrictos est\u00e1ndares profesionales y estamos autorizados para representar a clientes en asuntos migratorios oficiales. Este registro requiere experiencia comprobada, verificaci\u00f3n de antecedentes y cumplimiento continuo de las regulaciones del INM.",
+          "benefits": [
+            "Autorizados para acompa\u00f1arte a citas en el INM y representar tus intereses",
+            "Canales de comunicaci\u00f3n directa con funcionarios del INM para actualizaciones de estado",
+            "Capacitaci\u00f3n actualizada sobre los \u00faltimos cambios en la ley de inmigraci\u00f3n y procedimientos",
+            "Est\u00e1ndares de responsabilidad profesional para tu protecci\u00f3n",
+            "Capacidad de trabajar directamente con el INM para resolver complicaciones",
+            "Personal biling\u00fce fluido en terminolog\u00eda legal en espa\u00f1ol y explicaciones en ingl\u00e9s"
+          ],
+          "examples": [
+            "Cuando la tarjeta de residente temporal de un cliente se retras\u00f3 debido a un error del sistema, nuestro registro en el INM nos permiti\u00f3 contactar a la oficina directamente y resolver el problema r\u00e1pidamente.",
+            "Proporcionamos documentaci\u00f3n adicional y contexto para un cliente cuyo papeleo financiero fue cuestionado inicialmente, aprovechando nuestra posici\u00f3n profesional.",
+            "Coordinamos con la oficina del INM en Cabo para programar citas eficientemente, utilizando nuestro estatus registrado para navegar las temporadas de alta demanda."
+          ]
+        }
+      },
+      {
+        "title": "Ahorra Tiempo Significativo",
+        "description": "Nuestros formularios inteligentes eliminan la entrada repetitiva de datos y reducen dr\u00e1sticamente los errores de solicitud",
+        "details": {
+          "overview": "La inmigraci\u00f3n mexicana requiere enviar la misma informaci\u00f3n en m\u00faltiples formularios, a menudo en espa\u00f1ol. Nuestro sistema propietario recopila tu informaci\u00f3n una vez y llena autom\u00e1ticamente todos los formularios necesarios del INM, solicitudes consulares y documentos de apoyo. Esta tecnolog\u00eda, desarrollada a partir de a\u00f1os de procesamiento de solicitudes, detecta errores comunes antes de la presentaci\u00f3n.",
+          "benefits": [
+            "Responde preguntas una vez - llenamos todos los formularios requeridos autom\u00e1ticamente",
+            "La validaci\u00f3n incorporada previene los errores m\u00e1s comunes de solicitud",
+            "Traducci\u00f3n al espa\u00f1ol de tu informaci\u00f3n realizada correctamente",
+            "Generaci\u00f3n autom\u00e1tica de lista de verificaci\u00f3n seg\u00fan tu tipo de visa espec\u00edfico",
+            "Organizaci\u00f3n digital de documentos que los funcionarios del INM pueden revisar f\u00e1cilmente",
+            "Seguimiento del progreso en tiempo real para que sepas exactamente d\u00f3nde est\u00e1s"
+          ],
+          "examples": [
+            "Los clientes que solicitan residencia temporal t\u00edpicamente pasan muchas horas llenando formularios en espa\u00f1ol. Nuestro sistema reduce esto a un proceso simplificado de preguntas y respuestas en ingl\u00e9s, con todos los formularios generados autom\u00e1ticamente.",
+            "Prevenimos costosos problemas de cita consular al identificar que los extractos bancarios de un cliente no cumpl\u00edan los requisitos antes de que programara su cita.",
+            "Identificamos autom\u00e1ticamente que un solicitante de permiso de trabajo necesitaba el n\u00famero de registro en el INM de su empleador, ahorrando un viaje de regreso a la oficina y potencial reprogramaci\u00f3n de la cita."
+          ]
+        }
+      }
+    ],
+    "reviews": [
+      {
+        "text": "Los Cabos Immigration Services hizo todo el proceso sin contratiempos. Lo que pens\u00e9 que tardar\u00eda meses se complet\u00f3 eficientemente. \u00a1Muy recomendado!",
+        "author": "Mar\u00eda G.",
+        "status": "Residente Temporal",
+        "rating": 5
+      },
+      {
+        "text": "El equipo ten\u00eda un conocimiento incre\u00edble sobre los procedimientos de la oficina local del INM. Me acompa\u00f1aron a mi cita y todo fue sobre ruedas.",
+        "author": "John A.",
+        "status": "Residente Permanente",
+        "rating": 5
+      },
+      {
+        "text": "Como n\u00f3mada digital, me preocupaba la autorizaci\u00f3n de trabajo. Lo explicaron todo claramente y manejaron todo el papeleo. \u00a1Ahora trabajo legalmente desde el para\u00edso!",
+        "author": "Sarah C.",
+        "status": "Residente Temporal con Permiso de Trabajo",
+        "rating": 5
+      },
+      {
+        "text": "Despu\u00e9s de luchar solo con formularios en espa\u00f1ol, los encontr\u00e9. Su sistema de formularios inteligentes me ahorr\u00f3 mucho tiempo y estr\u00e9s. Detectaron errores que ni siquiera sab\u00eda que hab\u00eda cometido.",
+        "author": "Robert M.",
+        "status": "Residente Temporal",
+        "rating": 5
+      },
+      {
+        "text": "Profesionales, responsivos y conocen la oficina del INM de Cabo de adentro hacia afuera. Incluso me ayudaron cuando mi tarjeta se retras\u00f3 por un problema del sistema. \u00a1No puedo recomendarlos lo suficiente!",
+        "author": "Emma T.",
+        "status": "Residente Permanente",
+        "rating": 5
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Servicios de inmigraci\u00f3n experta para Cabo San Lucas, M\u00e9xico",
+    "quickLinks": "Enlaces R\u00e1pidos",
+    "services": "Servicios",
+    "temporaryResidency": "Residencia Temporal",
+    "permanentResidency": "Residencia Permanente",
+    "workPermits": "Permisos de Trabajo",
+    "aboutSusana": "Acerca de Susana",
+    "faq": "Preguntas Frecuentes",
+    "contact": "Contacto",
+    "hours": "Lun-Vie: 8 AM - 3 PM MST",
+    "copyright": "Todos los derechos reservados.",
+    "architectNote": "Para contratar al arquitecto de este sitio web llama al",
+    "privacyPolicy": "Pol\u00edtica de Privacidad",
+    "termsOfService": "T\u00e9rminos de Servicio"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "showAll": "Mostrar todas las preguntas",
+    "hide": "Ocultar preguntas",
+    "items": [
+      {
+        "question": "\u00bfCu\u00e1nto tiempo tarda el proceso de residencia?",
+        "answer": "El proceso completo generalmente toma de 6 a 8 semanas en total. Las citas en el consulado se pueden programar con 2 a 4 semanas de anticipaci\u00f3n. Una vez aprobado, tienes 6 meses para ingresar a M\u00e9xico y luego 30 d\u00edas para completar el proceso CANJE (canje de tu visa por una tarjeta de residente) en la oficina local del INM. La cita en el INM puede durar de 3 a 6 horas, con algunas oficinas emitiendo tarjetas el mismo d\u00eda."
+      },
+      {
+        "question": "\u00bfCu\u00e1les son los requisitos m\u00ednimos de ingresos para 2025?",
+        "answer": "Para residencia temporal: $27,000 USD en saldo bancario (\u00faltimos 12 meses) O $1,620 USD de ingresos mensuales (\u00faltimos 6 meses). Para residencia permanente: aproximadamente $54,000 USD en ahorros O $2,700 USD de ingresos mensuales. Los requisitos var\u00edan ligeramente por consulado y se ajustan anualmente. Los dependientes generalmente requieren una prueba adicional de ingresos mensuales de $500-1,800."
+      },
+      {
+        "question": "\u00bfNecesito hablar espa\u00f1ol?",
+        "answer": "No, no se requiere hablar espa\u00f1ol para obtener la residencia. Sin embargo, todos los tr\u00e1mites del INM se realizan en espa\u00f1ol. Los consultores de inmigraci\u00f3n como nosotros preparamos todos los formularios en ambos idiomas y podemos acompa\u00f1arte a las citas para traducir. Para la naturalizaci\u00f3n (despu\u00e9s de 5 a\u00f1os de residencia), deber\u00e1s demostrar habilidades en espa\u00f1ol y pasar un examen sobre historia y cultura mexicana."
+      },
+      {
+        "question": "\u00bfPuedo trabajar en M\u00e9xico con residencia temporal?",
+        "answer": "S\u00ed, pero debes solicitar la autorizaci\u00f3n de trabajo al pedir tu residencia temporal. El permiso de trabajo no es autom\u00e1tico; debes solicitarlo espec\u00edficamente. La autorizaci\u00f3n de trabajo est\u00e1 vinculada a un empleador espec\u00edfico, por lo que cambiar de trabajo requiere una nueva solicitud. Los residentes permanentes pueden trabajar libremente sin permisos adicionales. Los n\u00f3madas digitales que trabajan para empresas extranjeras t\u00e9cnicamente necesitan autorizaci\u00f3n de trabajo."
+      },
+      {
+        "question": "\u00bfPuedo salir de M\u00e9xico mientras se procesa mi residencia?",
+        "answer": "Depende de la etapa. Durante el proceso de solicitud en el consulado en el extranjero, puedes viajar libremente. Una vez que ingresas a M\u00e9xico con tu visa y comienzas el proceso CANJE, NO debes salir hasta recibir tu tarjeta de residente. En circunstancias excepcionales, puedes solicitar un permiso \u00fanico de salida/entrada al INM, que tarda aproximadamente 7 d\u00edas en emitirse."
+      },
+      {
+        "question": "\u00bfNecesito renovar mi residencia temporal cada a\u00f1o?",
+        "answer": "S\u00ed. Las tarjetas de residencia temporal se emiten inicialmente por 1 a\u00f1o y deben renovarse anualmente. Puedes renovar hasta 30 d\u00edas antes de la fecha de vencimiento (o hasta 55 d\u00edas despu\u00e9s del vencimiento si estabas fuera de M\u00e9xico, con un per\u00edodo de gracia de 5 d\u00edas al regresar). Despu\u00e9s de 4 a\u00f1os consecutivos de residencia temporal, puedes solicitar la residencia permanente, que nunca expira."
+      },
+      {
+        "question": "\u00bfQu\u00e9 pasa si me quedo m\u00e1s tiempo del permitido con mi visa de turista?",
+        "answer": "Quedarse m\u00e1s del tiempo permitido es una violaci\u00f3n grave. M\u00e9xico est\u00e1 tomando medidas energ\u00e9ticas contra los \u00abturistas perpetuos\u00bb que salen cada 180 d\u00edas para reiniciar su estad\u00eda. Puedes enfrentar multas, deportaci\u00f3n o quedar vetado para reingresar. Si te sorprenden excediendo tu visa, no puedes convertirte a residencia temporal desde dentro de M\u00e9xico; debes salir del pa\u00eds y solicitar en un consulado mexicano en el extranjero. Las multas pueden oscilar entre 1,000 y 10,000 pesos."
+      },
+      {
+        "question": "\u00bfPuedo solicitar residencia si soy propietario de un inmueble en M\u00e9xico?",
+        "answer": "\u00a1S\u00ed! Ser propietario de bienes ra\u00edces mexicanos puede calificarte para la residencia dependiendo del valor de la propiedad. Los requisitos var\u00edan seg\u00fan el consulado, pero generalmente las propiedades valuadas en $200,000+ USD pueden calificarte para la residencia temporal, mientras que valores m\u00e1s altos pueden calificarte para la residencia permanente. A\u00fan deber\u00e1s presentar los documentos de propiedad y posiblemente demostrar solvencia financiera adicional."
+      },
+      {
+        "question": "\u00bfQu\u00e9 pasa si estoy casado con un ciudadano mexicano?",
+        "answer": "Los c\u00f3nyuges mexicanos tienen un proceso simplificado. Puedes solicitar directamente en una oficina del INM en M\u00e9xico (sin necesidad de ir primero a un consulado en el extranjero). Necesitar\u00e1s tu acta de matrimonio (apostillada si te casaste fuera de M\u00e9xico), comprobante de la ciudadan\u00eda mexicana de tu c\u00f3nyuge y los documentos est\u00e1ndar. Despu\u00e9s de 2 a\u00f1os de residencia temporal por matrimonio, puedes solicitar la residencia permanente. Los c\u00f3nyuges mexicanos tambi\u00e9n pueden patrocinar a sus parejas extranjeras."
+      },
+      {
+        "question": "\u00bfTendr\u00e9 que pagar impuestos mexicanos como residente?",
+        "answer": "La residencia fiscal es independiente de la residencia migratoria. Te conviertes en residente fiscal mexicano si tienes un hogar permanente en M\u00e9xico O si tu centro de intereses vitales est\u00e1 en M\u00e9xico. Sin embargo, muchos residentes extranjeros no pagan impuesto sobre la renta en M\u00e9xico porque trabajan para empresas extranjeras o tienen ingresos de jubilaci\u00f3n de fuente extranjera. Consulta a un asesor fiscal; los consultores de inmigraci\u00f3n no est\u00e1n obligados a reportar tu situaci\u00f3n fiscal a las autoridades mexicanas."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "\u00bfListo para Hacer de Cabo tu Hogar?",
+    "subtitle": "Comienza tu proceso de inmigraci\u00f3n hoy con nuestro sistema de solicitud guiado",
+    "startApplication": "Iniciar Solicitud Gratuita",
+    "scheduleConsultation": "Programar Consulta"
+  }
+}

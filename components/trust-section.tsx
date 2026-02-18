@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { Card } from './ui/card';
 import { Star, Shield, Clock, X } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
+
+const trustIcons = [Star, Shield, Clock];
 
 interface TrustModalProps {
   isOpen: boolean;
@@ -20,6 +23,8 @@ interface TrustModalProps {
 }
 
 function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
+  const t = useTranslation();
+
   if (!isOpen || !trustItem) return null;
 
   const Icon = trustItem.icon;
@@ -45,13 +50,13 @@ function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
         <div className="p-6 space-y-6">
           {/* Overview */}
           <div>
-            <h4 className="font-semibold text-lg mb-3 text-primary">What This Means for You</h4>
+            <h4 className="font-semibold text-lg mb-3 text-primary">{t.trust.modal.whatThisMeans}</h4>
             <p className="text-muted-foreground leading-relaxed">{trustItem.details.overview}</p>
           </div>
 
           {/* Benefits */}
           <div>
-            <h4 className="font-semibold text-lg mb-3 text-primary">Key Benefits</h4>
+            <h4 className="font-semibold text-lg mb-3 text-primary">{t.trust.modal.keyBenefits}</h4>
             <ul className="space-y-3">
               {trustItem.details.benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-3">
@@ -66,7 +71,7 @@ function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
 
           {/* Examples */}
           <div>
-            <h4 className="font-semibold text-lg mb-3 text-primary">Real Examples</h4>
+            <h4 className="font-semibold text-lg mb-3 text-primary">{t.trust.modal.realExamples}</h4>
             <div className="space-y-3">
               {trustItem.details.examples.map((example, index) => (
                 <div key={index} className="bg-muted/50 p-4 rounded-lg border-l-4 border-primary">
@@ -81,7 +86,7 @@ function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
               onClick={onClose}
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 rounded-lg font-medium transition"
             >
-              Close
+              {t.trust.modal.close}
             </button>
           </div>
         </div>
@@ -91,38 +96,7 @@ function TrustModal({ isOpen, onClose, trustItem }: TrustModalProps) {
 }
 
 function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const reviews = [
-    {
-      text: "Los Cabos Immigration Services made the entire process seamless. What I thought would take months was completed efficiently. Highly recommended!",
-      author: "Maria G.",
-      status: "Temporary Resident",
-      rating: 5
-    },
-    {
-      text: "The team was incredibly knowledgeable about the local INM office procedures. They accompanied me to my appointment and everything went smoothly.",
-      author: "John A.",
-      status: "Permanent Resident",
-      rating: 5
-    },
-    {
-      text: "As a digital nomad, I was worried about getting work authorization. They explained everything clearly and handled all the paperwork. Now I'm legally working from paradise!",
-      author: "Sarah C.",
-      status: "Temporary Resident with Work Permit",
-      rating: 5
-    },
-    {
-      text: "After struggling on my own with forms in Spanish, I found these guys. Their smart form system saved me so much time and stress. They caught errors I didn't even know I had made.",
-      author: "Robert M.",
-      status: "Temporary Resident",
-      rating: 5
-    },
-    {
-      text: "Professional, responsive, and they know the Cabo INM office inside and out. They even helped me when my card was delayed due to a system issue. Can't recommend them enough!",
-      author: "Emma T.",
-      status: "Permanent Resident",
-      rating: 5
-    }
-  ];
+  const t = useTranslation();
 
   if (!isOpen) return null;
 
@@ -135,8 +109,8 @@ function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               <Star className="w-6 h-6 text-primary fill-primary" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold">Client Reviews</h3>
-              <p className="text-sm text-muted-foreground mt-1">What our clients say about us</p>
+              <h3 className="text-2xl font-bold">{t.trust.reviewsModal.title}</h3>
+              <p className="text-sm text-muted-foreground mt-1">{t.trust.reviewsModal.subtitle}</p>
             </div>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-muted rounded-lg transition">
@@ -145,7 +119,7 @@ function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
         </div>
 
         <div className="p-6 space-y-4">
-          {reviews.map((review, index) => (
+          {t.trust.reviews.map((review, index) => (
             <div key={index} className="bg-muted/30 rounded-lg p-6 border">
               {/* Stars */}
               <div className="flex gap-1 mb-3">
@@ -153,12 +127,12 @@ function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                   <Star key={i} className="w-5 h-5 text-primary fill-primary" />
                 ))}
               </div>
-              
+
               {/* Review Text */}
               <p className="text-muted-foreground italic mb-4 leading-relaxed">
                 "{review.text}"
               </p>
-              
+
               {/* Author */}
               <div className="flex items-center justify-between">
                 <div>
@@ -175,7 +149,7 @@ function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             onClick={onClose}
             className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 rounded-lg font-medium transition"
           >
-            Close Reviews
+            {t.trust.reviewsModal.closeReviews}
           </button>
         </div>
       </div>
@@ -184,74 +158,14 @@ function ReviewsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 }
 
 export function TrustSection() {
+  const t = useTranslation();
   const [selectedTrust, setSelectedTrust] = useState<number | null>(null);
   const [showReviews, setShowReviews] = useState(false);
 
-  const trustPoints = [
-    {
-      icon: Star,
-      title: 'Extensive Experience',
-      description: 'Successfully helped numerous families and individuals establish residency in Cabo San Lucas',
-      details: {
-        overview: 'With extensive specialized experience in Mexican immigration, we\'ve navigated every type of visa scenario, from straightforward temporary residency to complex work permit situations. Our team has processed applications through multiple Mexican consulates worldwide and understands the nuances of each location.',
-        benefits: [
-          'Deep understanding of INM (Instituto Nacional de Migración) procedures and requirements',
-          'Established working relationships with local INM offices in Cabo San Lucas and La Paz',
-          'Experience with all visa types: temporary, permanent, work permits, family reunification',
-          'Knowledge of recent policy changes and financial requirement updates',
-          'Strong track record with properly prepared applications',
-          'Familiarity with common pitfalls and proven strategies to avoid them'
-        ],
-        examples: [
-          'Helped a retired couple from Canada obtain permanent residency after their temporary status period, guiding them through each renewal and the final conversion process.',
-          'Successfully assisted a digital nomad secure work authorization while maintaining temporary residency, ensuring full compliance with INM regulations.',
-          'Guided a family through the entire process from initial consulate appointment to receiving their resident cards in Cabo - completed within normal processing timeframes.'
-        ]
-      }
-    },
-    {
-      icon: Shield,
-      title: 'INM-Registered Consultants',
-      description: 'Licensed immigration advisors familiar with Cabo\'s local INM office procedures',
-      details: {
-        overview: 'Our consultants are officially registered with the Instituto Nacional de Migración, which means we operate under strict professional standards and are authorized to represent clients in official immigration matters. This registration requires proven expertise, background checks, and ongoing compliance with INM regulations.',
-        benefits: [
-          'Authorized to accompany you to INM appointments and represent your interests',
-          'Direct communication channels with INM officers for status updates',
-          'Up-to-date training on the latest immigration law changes and procedures',
-          'Professional accountability standards for your protection',
-          'Ability to work directly with INM to resolve complications',
-          'Bilingual staff fluent in both Spanish legal terminology and English explanations'
-        ],
-        examples: [
-          'When a client\'s temporary resident card was delayed due to a system error, our INM registration allowed us to contact the office directly and resolve the issue quickly.',
-          'Successfully provided additional documentation and context for a client whose financial paperwork was initially questioned, leveraging our professional standing.',
-          'Coordinated with the Cabo INM office to schedule appointments efficiently, utilizing our registered status to navigate busy seasons.'
-        ]
-      }
-    },
-    {
-      icon: Clock,
-      title: 'Save Significant Time',
-      description: 'Our smart forms eliminate repetitive data entry and dramatically reduce application errors',
-      details: {
-        overview: 'Mexican immigration requires submitting the same information across multiple forms, often in Spanish. Our proprietary system collects your information once and automatically populates all necessary INM forms, consulate applications, and supporting documents. This technology, developed from years of processing applications, catches common errors before submission.',
-        benefits: [
-          'Answer questions once - we fill out all required forms automatically',
-          'Built-in validation prevents the most common application errors',
-          'Spanish translation of your information done correctly',
-          'Automatic checklist generation based on your specific visa type',
-          'Digital document organization that INM officers can easily review',
-          'Real-time progress tracking so you know exactly where you stand'
-        ],
-        examples: [
-          'Clients applying for temporary residency typically spend many hours filling out forms in Spanish. Our system reduces this to a simplified question-and-answer process in English, with all forms generated automatically.',
-          'Prevented costly consulate appointment issues by identifying that a client\'s bank statements didn\'t meet requirements before they scheduled their appointment.',
-          'Automatically identified that a work permit applicant needed their employer\'s INM registration number, saving a trip back to the office and potential appointment rescheduling.'
-        ]
-      }
-    },
-  ];
+  const trustPoints = t.trust.points.map((point, i) => ({
+    ...point,
+    icon: trustIcons[i],
+  }));
 
   return (
     <>
@@ -269,9 +183,9 @@ export function TrustSection() {
       <section id="about" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Los Cabos Immigration Services?</h2>
+            <h2 className="text-4xl font-bold mb-4">{t.trust.title}</h2>
             <p className="text-sm text-muted-foreground">
-              Click any card to learn more about our expertise
+              {t.trust.clickHint}
             </p>
           </div>
 
@@ -292,7 +206,7 @@ export function TrustSection() {
                   <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{point.title}</h3>
                   <p className="text-muted-foreground mb-4">{point.description}</p>
                   <span className="text-primary text-sm font-medium group-hover:underline">
-                    Learn More →
+                    {t.trust.learnMore}
                   </span>
                 </Card>
               );
@@ -306,7 +220,7 @@ export function TrustSection() {
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
             >
               <Star className="w-5 h-5" />
-              Read Client Reviews
+              {t.trust.readReviews}
               <Star className="w-5 h-5" />
             </button>
           </div>

@@ -6,17 +6,250 @@ import { FAQSection } from '@/components/faq-section'
 import { HelpCircle, Search } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Mexican Immigration FAQ - Cabo San Lucas Residency Questions Answered',
-  description: 'Complete FAQ about Mexican temporary residency, permanent residency, work permits, visa requirements, costs, timelines. Expert answers from licensed INM consultants in Cabo.',
+  title: {
+    absolute: 'Mexico Immigration FAQ 2025 | INM-Registered Specialist',
+  },
+  description: '2025 answers on income thresholds, processing times, document checklists, and INM procedures — answered by INM-registered specialist Susana Rapini in Cabo.',
+  alternates: {
+    canonical: 'https://www.loscabosimmigration.com/faq',
+  },
   openGraph: {
-    title: 'Immigration FAQ - Cabo San Lucas Mexico Visa Questions',
-    description: 'Get answers to common Mexican immigration questions: residency requirements, work permits, visa costs, processing times, INM procedures.',
+    title: 'Mexico Immigration FAQ 2025 — Answered by INM-Registered Specialist',
+    description: 'Accurate 2025 answers on income requirements, timelines, document checklists, and INM procedures. Written by INM-registered specialist Susana Rapini in Cabo.',
   },
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How long does the residency process take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The complete process typically takes 6-8 weeks total. Consulate appointments can be scheduled 2-4 weeks out. Once approved, you have 6 months to enter Mexico, then 30 days to complete the CANJE process (exchanging your visa for a resident card) at the local INM office. The actual INM appointment can take 3-6 hours, with some offices issuing cards same-day.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the minimum income requirements for 2025?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For temporary residency: $27,000 USD in bank balance (last 12 months) OR $1,620 USD monthly income (last 6 months). For permanent residency: approximately $54,000 USD savings OR $2,700 USD monthly income. Requirements vary slightly by consulate and are adjusted annually. Dependents typically require an additional $500-1,800 monthly income proof.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to speak Spanish to get Mexican residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No, Spanish is not required to obtain residency. However, all INM procedures are conducted in Spanish. Immigration consultants like us prepare all forms in both languages and can accompany you to appointments to translate. For naturalization (after 5 years of residency), you will need to demonstrate Spanish language skills and pass a test on Mexican history and culture.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I work in Mexico with temporary residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, but you must apply for work authorization when requesting your temporary residency. Work permission is not automatic — you must specifically request it. The work authorization is tied to a specific employer, so changing jobs requires a new application. Permanent residents can work freely without additional permits. Digital nomads working for foreign companies technically need work authorization.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I leave Mexico while my residency is being processed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It depends on the stage. During the consulate application process abroad, you can travel freely. Once you enter Mexico with your visa and start the CANJE process, you should not leave until you receive your resident card. In exceptional circumstances, you can request a one-time exit/entry permit from INM, which takes about 7 days to issue.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to renew my temporary residency every year?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Temporary residency cards are initially issued for 1 year and must be renewed annually. You can renew up to 30 days before expiration (or up to 55 days after expiration if you were outside Mexico, with a 5-day grace period upon return). After 4 consecutive years of temporary residency, you become eligible to apply for permanent residency, which never expires.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens if I overstay my tourist visa in Mexico?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Overstaying is a serious violation. Mexico is cracking down on "perpetual tourists" who leave every 180 days to reset their stay. You may face fines, deportation, or be barred from re-entry. If caught overstaying, you cannot convert to temporary residency from within Mexico — you must leave the country and apply at a Mexican consulate abroad. Fines can range from 1,000 to 10,000 pesos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I apply for Mexican residency if I own property in Mexico?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Owning Mexican real estate can qualify you for residency depending on the property value. Requirements vary by consulate, but generally properties valued at $200,000+ USD may qualify you for temporary residency, while higher values may qualify for permanent residency. You will still need to show property ownership documents and may need to prove additional financial solvency.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I am married to a Mexican citizen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mexican spouses have a streamlined path. You can apply directly at an INM office in Mexico without going to a consulate abroad first. You will need your marriage certificate (apostilled if married outside Mexico), proof of your spouse\'s Mexican citizenship, and standard documents. After 2 years of temporary residency through marriage, you can apply for permanent residency.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will I have to pay Mexican taxes as a resident?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tax residency is separate from immigration residency. You become a Mexican tax resident if you have a permanent home in Mexico or if your center of vital interests is in Mexico. However, many foreign residents do not pay Mexican income tax because they work for foreign companies or have foreign-sourced retirement income. Consult a qualified tax advisor familiar with cross-border tax law.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which Mexican consulate should I use to apply for residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You can apply at any Mexican consulate, but most applicants use the one nearest their legal residence or where they can most easily schedule an appointment. Popular consulates for Americans include San Diego (typically fastest appointments), Los Angeles, Phoenix, Houston, Miami, and Chicago. Each consulate has slightly different procedures, so check their specific website. San Diego often processes applications same-day, while others take 1-2 weeks.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I apply for Mexican residency from inside Mexico?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Generally, no. You must apply at a Mexican consulate in your home country or country of legal residence. Exceptions include immediate family members of Mexican citizens or permanent residents, who can apply at INM offices in Mexico, and those converting from temporary to permanent residency after 4 years. Tourist visa holders cannot convert to residency from within Mexico — attempting this results in automatic denial.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do pension or Social Security payments count as income for Mexican residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Pension payments, Social Security benefits, military retirement, and any other regular monthly payments qualify as income for residency applications. You will need official documentation showing consistent payments for at least 6 consecutive months, such as pension statements, Social Security award letters, or bank deposits showing regular deposits. The income must meet the minimums: $1,620 USD/month for temporary residency or $2,700 USD/month for permanent residency.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I combine income and savings to meet the financial requirements?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Policies vary by consulate. Some consulates allow combining income and savings, while others require you to meet either the income threshold or the savings threshold completely. The safest approach is to qualify using one method fully. If you are borderline on both, consult an immigration consultant to determine which consulate\'s policies best fit your situation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I have investment accounts instead of regular income?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Investment accounts qualify as savings balance if they show the required minimum ($27,000 USD for temporary or $54,000 USD for permanent) maintained consistently for 12 months. Investment distributions can count as income if they are regular and predictable. Provide brokerage statements showing account values and distribution history. Some consulates are more flexible with investment income than others.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need a Mexican address to apply for residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You do not need a Mexican address for the initial consulate application, but you will need one for the CANJE process (exchanging your visa for a resident card) within 30 days of entering Mexico. This can be a rental, purchased home, or a friend\'s address where you are staying. INM requires proof of address like a rental contract, property deed, or utility bill. Address changes must be reported to INM within 90 days.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens if my residency application is denied?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Consulates rarely outright deny applications — they typically request additional documentation or clarification. Common issues include insufficient financial documentation, expired documents, or missing paperwork. If denied, you can reapply once you address the reasons for denial. There is no waiting period, but you must resolve the underlying issue. Professional consultation before applying significantly reduces denial risk.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I start a business in Mexico with temporary residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, but you need work authorization on your temporary resident card. Starting a business is considered economic activity requiring work permission, even if you are self-employed. You can own a business without work authorization (passive ownership with hired management), but active involvement in operations requires permission. Permanent residents can start and operate businesses freely without additional authorization.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I freelance or do consulting work with temporary residency in Mexico?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Technically, all work performed in Mexico requires authorization, even freelance work for foreign clients. The safest approach is to obtain temporary residency with general work permission, which costs approximately 1,780 MXN (~$105 USD) additional when adding to your resident card. Many digital nomads and freelancers report working on tourist visas without issues, but legally you should have authorization. Risk increases if you are visibly working in public or posting about work on social media.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can my spouse and children get Mexican residency with me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Family members can apply as dependents on your application. Dependent requirements include additional financial showing ($500-1,800 per dependent monthly, varies by consulate) and proof of relationship via apostilled marriage or birth certificates. All dependents must attend the consulate appointment together. Children under 18 are typically approved if the parent qualifies. Adult children may need to prove financial dependency.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will a DUI or criminal record affect my Mexican residency application?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Minor criminal records like a single DUI conviction typically do not disqualify residency applicants, but you must disclose them honestly. Mexico primarily excludes applicants with serious criminal histories: violent crimes, drug trafficking, or human trafficking. Background check requirements vary by consulate. Be completely honest on your application — lying about criminal history is grounds for immediate denial and potential ban from future applications.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I eventually get Mexican citizenship?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. After 5 years of permanent residency (or 2 years if married to a Mexican citizen), you can apply for naturalization. Requirements include demonstrating Spanish language proficiency, passing a test on Mexican history and culture, and showing good moral character. Many countries including the USA and Canada allow dual citizenship. The naturalization process takes 6-18 months and grants you all rights of Mexican nationals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will I have access to Mexican healthcare as a resident?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Temporary and permanent residents can enroll in IMSS (Mexican Social Security healthcare) by paying monthly premiums, which typically cost $300-500 USD annually for individuals. Mexican private healthcare is also high quality and affordable compared to the United States — private consultations run $30-80 USD and procedures cost 50-70% less than US equivalents. Most expatriates combine IMSS enrollment with supplemental private insurance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the INM and what does it do?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'INM stands for Instituto Nacional de Migración (National Immigration Institute) — Mexico\'s official federal immigration authority. INM is responsible for processing residency applications, issuing resident cards, registering employers who hire foreign workers, and enforcing immigration law. The INM office in Cabo San Lucas is located at Blvd. Lázaro Cárdenas 1625 and serves the Los Cabos corridor. INM-registered consultants like Susana Rapini are officially authorized to represent clients before the institute.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What documents do I need to apply for temporary residency in Mexico?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Required documents typically include: valid passport (6+ months remaining), completed application form, financial proof (bank statements for 12 months showing $27,000 USD balance, or income statements showing $1,620 USD/month for 6 months), two passport photos, and payment of the consulate fee ($54 USD non-refundable). If applying for work authorization, include a job offer letter. Documents in a foreign language must be accompanied by certified Spanish translations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between temporary and permanent residency in Mexico?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Temporary residency (residente temporal) is valid for 1-4 years and requires annual renewal. It requires lower financial thresholds ($1,620/month income or $27,000 savings) and work authorization must be specifically requested. Permanent residency (residente permanente) never expires, includes automatic work rights for any employer, and requires higher financial qualifications ($2,700/month or $54,000 savings) or 4 years of prior temporary residency. Permanent residency is also the path to Mexican citizenship eligibility.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to get Mexican residency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Government fees include a consulate application fee ($54 USD non-refundable) and the resident card fee paid to INM (3,000-5,570 MXN, approximately $150-280 USD, depending on card duration). Additional costs may include document apostilles ($50-150 per document), certified translations, and consultant fees for professional assistance. Renewal fees are similar annually. Total government costs typically range from $400-700 USD for the initial application.',
+      },
+    },
+  ],
+};
+
 export default function FAQPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero */}
@@ -233,5 +466,6 @@ export default function FAQPage() {
       
       <Footer />
     </div>
+    </>
   )
 }

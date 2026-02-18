@@ -1,0 +1,381 @@
+{
+  "header": {
+    "brandName": "Los Cabos Immigration Services",
+    "services": "Services",
+    "servicesOverview": "Services Overview",
+    "servicesOverviewDesc": "Overview of our services",
+    "temporaryResidency": "Temporary Residency",
+    "temporaryResidencyDesc": "1-4 year permits",
+    "permanentResidency": "Permanent Residency",
+    "permanentResidencyDesc": "Lifetime status",
+    "workPermits": "Work Permits",
+    "workPermitsDesc": "Employment authorization",
+    "howItWorks": "How It Works",
+    "aboutSusana": "About Susana",
+    "faq": "FAQ",
+    "startApplication": "Start Application",
+    "contactUs": "Contact Us",
+    "allServices": "All Services",
+    "langToggle": "ES"
+  },
+  "hero": {
+    "h1Line1": "Los Cabos",
+    "h1Line2": "Immigration Services",
+    "h1Line3": "INM Consultants",
+    "subtitle": "Expert assistance for temporary residency, permanent residency, and work permits in Cabo San Lucas",
+    "scheduleConsultation": "Schedule Consultation",
+    "contactInfo": "Contact Info",
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Los Cabos Immigration Services Office",
+      "officeLocation": "Office Location",
+      "phone": "Phone",
+      "officeHours": "Office Hours",
+      "monFri": "Monday - Friday",
+      "monFriHours": "8 AM \u2013 3 PM MST",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed",
+      "getDirections": "Get Directions",
+      "close": "Close"
+    }
+  },
+  "consultation": {
+    "title": "Schedule a Consultation",
+    "subtitle": "We'll get back to you within 24 hours",
+    "fullName": "Full Name *",
+    "namePlaceholder": "Your full name",
+    "email": "Email Address *",
+    "emailPlaceholder": "your.email@example.com",
+    "phone": "Phone Number *",
+    "phonePlaceholder": "+52 624 123 4567",
+    "preferredDate": "Preferred Consultation Date",
+    "message": "Tell us about your immigration needs",
+    "messagePlaceholder": "What type of residency are you interested in? Any specific questions?",
+    "successMessage": "\u2713 Consultation request sent! We'll contact you within 24 hours.",
+    "errorMessage": "\u2717 Something went wrong. Please try again or call us at 624 125 9640.",
+    "sending": "Sending...",
+    "submit": "Schedule Consultation",
+    "cancel": "Cancel"
+  },
+  "services": {
+    "title": "Our Immigration Services",
+    "subtitle": "Simplified processes for living and working in Mexico",
+    "startApplication": "Start Application",
+    "chooseNextStep": "Choose your service type in the next step",
+    "secureLabel": "Secure & Confidential - Protected by SSL Encryption",
+    "items": [
+      {
+        "title": "Temporary Residency",
+        "description": "Valid for 1-4 years with optional work authorization. Perfect for retirees, remote workers, and those testing life in Mexico.",
+        "points": ["1-4 year validity", "Renewable process", "Work permit available"]
+      },
+      {
+        "title": "Permanent Residency",
+        "description": "Live in Mexico indefinitely with full work rights. No renewals needed after approval.",
+        "points": ["No expiration date", "Automatic work authorization", "Path to citizenship"]
+      },
+      {
+        "title": "Work Permits & Employment",
+        "description": "Legal authorization for foreign workers. We handle employer registration and employee documentation.",
+        "points": ["Employer sponsorship support", "Job offer documentation", "INM registration"]
+      },
+      {
+        "title": "Renewals & Updates",
+        "description": "Keep your status current without penalties. We track deadlines and handle paperwork.",
+        "points": ["30-day reminder system", "Address change notifications", "Avoid fines & delays"]
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Simple 4-Step Process",
+    "subtitle": "Our streamlined approach makes immigration easy",
+    "clickHint": "Click any card to learn detailed requirements, timelines, and costs",
+    "learnMore": "Learn More \u2192",
+    "gotIt": "Got it, thanks!",
+    "modal": {
+      "timeline": "\u23f1\ufe0f Timeline",
+      "requirements": "\ud83d\udccb Requirements",
+      "keyFacts": "\ud83d\udca1 Key Facts",
+      "costs": "\ud83d\udcb0 Costs"
+    },
+    "steps": [
+      {
+        "title": "Choose Your Service",
+        "description": "Select temporary residency, permanent residency, or work permit",
+        "details": {
+          "timeline": "Consulate appointment typically takes 2-4 weeks to schedule. Total initial process: 1-2 months.",
+          "requirements": [
+            "Valid passport with at least 6 months validity",
+            "Proof of financial solvency: $27,000 USD in bank balance (last 12 months) OR $1,620 USD monthly income (last 6 months)",
+            "Completed visa application form",
+            "Recent passport-sized photo (white background)",
+            "Consular appointment fee: $54 USD (non-refundable)"
+          ],
+          "keyFacts": [
+            "Temporary residency allows stays up to 4 years before permanent residency eligibility",
+            "Work permission must be requested separately unless married to Mexican citizen",
+            "INM (Instituto Nacional de Migraci\u00f3n) processes all residency applications",
+            "Temporary residents must notify INM of address changes within 90 days",
+            "Perpetual tourists (leaving every 180 days) face increasing enforcement and fines"
+          ],
+          "costs": "Consulate visa: $54 USD | Temporary resident card (1 year): 3,000-5,570 MXN (~$175-$325 USD) | Permanent resident card: 6,789 MXN (~$400 USD)"
+        }
+      },
+      {
+        "title": "Complete Smart Form",
+        "description": "Answer questions once - we auto-fill all Mexican immigration forms for you",
+        "details": {
+          "timeline": "30-day window after receiving visa to complete process in Mexico. Card issuance: same day to 1 week depending on INM office.",
+          "requirements": [
+            "Approved temporary resident visa from Mexican consulate",
+            "FMM (Forma Migratoria M\u00faltiple) received at airport/border",
+            "Original passport with visa stamp",
+            "Proof of legal entry into Mexico",
+            "Payment for resident card (varies by duration: 1-4 years)",
+            "Biometric data (fingerprints and photograph at INM office)"
+          ],
+          "keyFacts": [
+            "CANJE process: exchanging your visa for resident card at local INM office",
+            "Appointments required at most INM offices - plan ahead",
+            "Bring all original documents plus photocopies",
+            "Process can take 3-6 hours at INM office",
+            "Card expires on date shown in DD/MM/YYYY format",
+            "Renewal window: up to 30 days before expiration (or 55 days if outside Mexico)"
+          ],
+          "costs": "Annual renewal fees vary by card duration. Work permit addition: ~1,780 MXN. Replacement card if lost: ~600 MXN plus new photo requirements."
+        }
+      },
+      {
+        "title": "Review & Download",
+        "description": "Review completed forms, upload supporting documents, get your personalized checklist",
+        "details": {
+          "timeline": "Document preparation: 1-2 weeks. Apostille/legalization: 2-4 weeks additional if required.",
+          "requirements": [
+            "Birth certificate (apostilled if from non-Spanish speaking country)",
+            "Marriage certificate if applicable (apostilled)",
+            "Police clearance/background check from country of residence",
+            "Proof of income: 6 months bank statements or employment letter",
+            "Health insurance documentation (recommended)",
+            "Job offer letter with salary details if applying for work permit",
+            "Educational diplomas/certificates if required for job"
+          ],
+          "keyFacts": [
+            "Documents in languages other than Spanish must be officially translated",
+            "Apostille requirements vary by country - check with consulate",
+            "Digital copies usually accepted initially, originals at appointment",
+            "Financial documents must show consistent monthly income or savings",
+            "Employer registration with INM required before work permit application",
+            "Keep copies of everything - INM may request additional documentation"
+          ],
+          "costs": "Apostille services: $20-50 USD per document | Professional translation: $25-40 USD per page | Background check: $20-50 USD depending on country"
+        }
+      },
+      {
+        "title": "Submit & Track",
+        "description": "Submit to INM with our guidance or book a consultation for hands-on help",
+        "details": {
+          "timeline": "Work permit approval from INM: 20-30 business days. Consulate visa issuance: 10 business days. Total: 1-2 months for work permits.",
+          "requirements": [
+            "Employer must be registered with INM (constancia de inscripci\u00f3n de empleador)",
+            "NUT (Unique Processing Number) issued by INM to employer",
+            "Signed employment contract in Spanish with job details and salary",
+            "Proof that position requires foreign expertise (no labor market test but qualifications matter)",
+            "Company registration documents and tax information",
+            "Letter acknowledging employer covers travel expenses"
+          ],
+          "keyFacts": [
+            "Employer initiates work permit process - employees cannot self-apply",
+            "Work permits tied to specific employer - changing jobs requires new application",
+            "Temporary work visa valid up to 4 years, renewable annually",
+            "After 4 consecutive years, eligible for permanent residency",
+            "Permanent residents can work freely without additional permits",
+            "Tourist visas cannot be converted to work permits - must leave Mexico and reapply",
+            "Digital nomads working for non-Mexican companies technically need work authorization"
+          ],
+          "costs": "Employer INM registration: varies by company size | Work authorization addition to resident card: 1,780 MXN (~$105 USD) | Legal assistance (optional): $500-2,000 USD"
+        }
+      }
+    ]
+  },
+  "trust": {
+    "title": "Why Choose Los Cabos Immigration Services?",
+    "clickHint": "Click any card to learn more about our expertise",
+    "learnMore": "Learn More \u2192",
+    "readReviews": "Read Client Reviews",
+    "modal": {
+      "whatThisMeans": "What This Means for You",
+      "keyBenefits": "Key Benefits",
+      "realExamples": "Real Examples",
+      "close": "Close"
+    },
+    "reviewsModal": {
+      "title": "Client Reviews",
+      "subtitle": "What our clients say about us",
+      "closeReviews": "Close Reviews"
+    },
+    "points": [
+      {
+        "title": "Extensive Experience",
+        "description": "Successfully helped numerous families and individuals establish residency in Cabo San Lucas",
+        "details": {
+          "overview": "With extensive specialized experience in Mexican immigration, we've navigated every type of visa scenario, from straightforward temporary residency to complex work permit situations. Our team has processed applications through multiple Mexican consulates worldwide and understands the nuances of each location.",
+          "benefits": [
+            "Deep understanding of INM (Instituto Nacional de Migraci\u00f3n) procedures and requirements",
+            "Established working relationships with local INM offices in Cabo San Lucas and La Paz",
+            "Experience with all visa types: temporary, permanent, work permits, family reunification",
+            "Knowledge of recent policy changes and financial requirement updates",
+            "Strong track record with properly prepared applications",
+            "Familiarity with common pitfalls and proven strategies to avoid them"
+          ],
+          "examples": [
+            "Helped a retired couple from Canada obtain permanent residency after their temporary status period, guiding them through each renewal and the final conversion process.",
+            "Successfully assisted a digital nomad secure work authorization while maintaining temporary residency, ensuring full compliance with INM regulations.",
+            "Guided a family through the entire process from initial consulate appointment to receiving their resident cards in Cabo - completed within normal processing timeframes."
+          ]
+        }
+      },
+      {
+        "title": "INM-Registered Consultants",
+        "description": "Licensed immigration advisors familiar with Cabo's local INM office procedures",
+        "details": {
+          "overview": "Our consultants are officially registered with the Instituto Nacional de Migraci\u00f3n, which means we operate under strict professional standards and are authorized to represent clients in official immigration matters. This registration requires proven expertise, background checks, and ongoing compliance with INM regulations.",
+          "benefits": [
+            "Authorized to accompany you to INM appointments and represent your interests",
+            "Direct communication channels with INM officers for status updates",
+            "Up-to-date training on the latest immigration law changes and procedures",
+            "Professional accountability standards for your protection",
+            "Ability to work directly with INM to resolve complications",
+            "Bilingual staff fluent in both Spanish legal terminology and English explanations"
+          ],
+          "examples": [
+            "When a client's temporary resident card was delayed due to a system error, our INM registration allowed us to contact the office directly and resolve the issue quickly.",
+            "Successfully provided additional documentation and context for a client whose financial paperwork was initially questioned, leveraging our professional standing.",
+            "Coordinated with the Cabo INM office to schedule appointments efficiently, utilizing our registered status to navigate busy seasons."
+          ]
+        }
+      },
+      {
+        "title": "Save Significant Time",
+        "description": "Our smart forms eliminate repetitive data entry and dramatically reduce application errors",
+        "details": {
+          "overview": "Mexican immigration requires submitting the same information across multiple forms, often in Spanish. Our proprietary system collects your information once and automatically populates all necessary INM forms, consulate applications, and supporting documents. This technology, developed from years of processing applications, catches common errors before submission.",
+          "benefits": [
+            "Answer questions once - we fill out all required forms automatically",
+            "Built-in validation prevents the most common application errors",
+            "Spanish translation of your information done correctly",
+            "Automatic checklist generation based on your specific visa type",
+            "Digital document organization that INM officers can easily review",
+            "Real-time progress tracking so you know exactly where you stand"
+          ],
+          "examples": [
+            "Clients applying for temporary residency typically spend many hours filling out forms in Spanish. Our system reduces this to a simplified question-and-answer process in English, with all forms generated automatically.",
+            "Prevented costly consulate appointment issues by identifying that a client's bank statements didn't meet requirements before they scheduled their appointment.",
+            "Automatically identified that a work permit applicant needed their employer's INM registration number, saving a trip back to the office and potential appointment rescheduling."
+          ]
+        }
+      }
+    ],
+    "reviews": [
+      {
+        "text": "Los Cabos Immigration Services made the entire process seamless. What I thought would take months was completed efficiently. Highly recommended!",
+        "author": "Maria G.",
+        "status": "Temporary Resident",
+        "rating": 5
+      },
+      {
+        "text": "The team was incredibly knowledgeable about the local INM office procedures. They accompanied me to my appointment and everything went smoothly.",
+        "author": "John A.",
+        "status": "Permanent Resident",
+        "rating": 5
+      },
+      {
+        "text": "As a digital nomad, I was worried about getting work authorization. They explained everything clearly and handled all the paperwork. Now I'm legally working from paradise!",
+        "author": "Sarah C.",
+        "status": "Temporary Resident with Work Permit",
+        "rating": 5
+      },
+      {
+        "text": "After struggling on my own with forms in Spanish, I found these guys. Their smart form system saved me so much time and stress. They caught errors I didn't even know I had made.",
+        "author": "Robert M.",
+        "status": "Temporary Resident",
+        "rating": 5
+      },
+      {
+        "text": "Professional, responsive, and they know the Cabo INM office inside and out. They even helped me when my card was delayed due to a system issue. Can't recommend them enough!",
+        "author": "Emma T.",
+        "status": "Permanent Resident",
+        "rating": 5
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Expert immigration services for Cabo San Lucas, Mexico",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "temporaryResidency": "Temporary Residency",
+    "permanentResidency": "Permanent Residency",
+    "workPermits": "Work Permits",
+    "aboutSusana": "About Susana",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "hours": "Mon-Fri: 8 AM - 3 PM MST",
+    "copyright": "All rights reserved.",
+    "architectNote": "To hire the architect of this website call",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "showAll": "Show all questions",
+    "hide": "Hide questions",
+    "items": [
+      {
+        "question": "How long does the residency process take?",
+        "answer": "The complete process typically takes 6-8 weeks total. Consulate appointments can be scheduled 2-4 weeks out. Once approved, you have 6 months to enter Mexico, then 30 days to complete the CANJE process (exchanging your visa for a resident card) at the local INM office. The actual INM appointment can take 3-6 hours, with some offices issuing cards same-day."
+      },
+      {
+        "question": "What are the minimum income requirements for 2025?",
+        "answer": "For temporary residency: $27,000 USD in bank balance (last 12 months) OR $1,620 USD monthly income (last 6 months). For permanent residency: approximately $54,000 USD savings OR $2,700 USD monthly income. Requirements vary slightly by consulate and are adjusted annually. Dependents typically require an additional $500-1,800 monthly income proof."
+      },
+      {
+        "question": "Do I need to speak Spanish?",
+        "answer": "No, Spanish is not required to obtain residency. However, all INM procedures are conducted in Spanish. Immigration consultants like us prepare all forms in both languages and can accompany you to appointments to translate. For naturalization (after 5 years of residency), you will need to demonstrate Spanish language skills and pass a test on Mexican history and culture."
+      },
+      {
+        "question": "Can I work in Mexico with temporary residency?",
+        "answer": "Yes, but you must apply for work authorization when requesting your temporary residency. Work permission is not automatic - you must specifically request it. The work authorization is tied to a specific employer, so changing jobs requires a new application. Permanent residents can work freely without additional permits. Digital nomads working for foreign companies technically need work authorization."
+      },
+      {
+        "question": "Can I leave Mexico while my residency is being processed?",
+        "answer": "It depends on the stage. During the consulate application process abroad, you can travel freely. Once you enter Mexico with your visa and start the CANJE process, you should NOT leave until you receive your resident card. In exceptional circumstances, you can request a one-time exit/entry permit from INM, which takes about 7 days to issue."
+      },
+      {
+        "question": "Do I need to renew my temporary residency every year?",
+        "answer": "Yes. Temporary residency cards are initially issued for 1 year and must be renewed annually. You can renew up to 30 days before expiration (or up to 55 days after expiration if you were outside Mexico, with a 5-day grace period upon return). After 4 consecutive years of temporary residency, you become eligible to apply for permanent residency, which never expires."
+      },
+      {
+        "question": "What happens if I overstay my tourist visa?",
+        "answer": "Overstaying is a serious violation. Mexico is cracking down on \"perpetual tourists\" who leave every 180 days to reset their stay. You may face fines, deportation, or be barred from re-entry. If caught overstaying, you cannot convert to temporary residency from within Mexico - you must leave the country and apply at a Mexican consulate abroad. Fines can range from 1,000-10,000 pesos."
+      },
+      {
+        "question": "Can I apply for residency if I own property in Mexico?",
+        "answer": "Yes! Owning Mexican real estate can qualify you for residency depending on the property value. Requirements vary by consulate, but generally properties valued at $200,000+ USD may qualify you for temporary residency, while higher values may qualify for permanent residency. You'll still need to show the property ownership documents and may need to prove additional financial solvency."
+      },
+      {
+        "question": "What if I'm married to a Mexican citizen?",
+        "answer": "Mexican spouses have a streamlined path. You can apply directly at an INM office in Mexico (no need to go to a consulate abroad first). You'll need your marriage certificate (apostilled if married outside Mexico), proof of your spouse's Mexican citizenship, and standard documents. After 2 years of temporary residency through marriage, you can apply for permanent residency. Mexican spouses can also sponsor their foreign partners."
+      },
+      {
+        "question": "Will I have to pay Mexican taxes as a resident?",
+        "answer": "Tax residency is separate from immigration residency. You become a Mexican tax resident if you have a permanent home in Mexico OR if your center of vital interests is in Mexico. However, many foreign residents don't pay Mexican income tax because they work for foreign companies or have foreign-sourced retirement income. Consult a tax advisor, but immigration consultants are not required to report your tax status to Mexican authorities."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to Make Cabo Your Home?",
+    "subtitle": "Start your immigration journey today with our guided application system",
+    "startApplication": "Start Free Application",
+    "scheduleConsultation": "Schedule Consultation"
+  }
+}

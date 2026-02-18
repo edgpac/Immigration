@@ -11,6 +11,9 @@ import { Calendar, Home, Briefcase, FileCheck } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Immigration Services in Cabo San Lucas | Temporary & Permanent Residency',
   description: 'Complete immigration services in Los Cabos: temporary residency, permanent residency, work permits, visa renewals. Licensed INM consultants with 15+ years experience. Fast processing.',
+  alternates: {
+    canonical: 'https://www.loscabosimmigration.com/services',
+  },
   openGraph: {
     title: 'Immigration Services Cabo San Lucas - Expert Visa Assistance',
     description: 'Professional immigration services for temporary residency, permanent residency, and work permits in Los Cabos, Mexico.',

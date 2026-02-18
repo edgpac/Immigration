@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { X, MapPin, Phone, Clock, Mail, User, Calendar, MessageSquare } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
 
 interface HeroSectionProps {
   onStartApplication: () => void;
@@ -17,6 +18,7 @@ interface ConsultationFormData {
 }
 
 function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const t = useTranslation();
   const [formData, setFormData] = useState<ConsultationFormData>({
     name: '',
     email: '',
@@ -41,13 +43,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          preferredDate: '',
-          message: '',
-        });
+        setFormData({ name: '', email: '', phone: '', preferredDate: '', message: '' });
         setTimeout(() => {
           onClose();
           setSubmitStatus('idle');
@@ -69,8 +65,8 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
       <div className="bg-background rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <div className="sticky top-0 bg-background border-b p-6 flex justify-between items-start">
           <div>
-            <h3 className="text-2xl font-bold">Schedule a Consultation</h3>
-            <p className="text-sm text-muted-foreground mt-1">We'll get back to you within 24 hours</p>
+            <h3 className="text-2xl font-bold">{t.consultation.title}</h3>
+            <p className="text-sm text-muted-foreground mt-1">{t.consultation.subtitle}</p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-muted rounded-lg transition">
             <X className="w-5 h-5" />
@@ -82,7 +78,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             <label className="block text-sm font-medium mb-2">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4 text-primary" />
-                Full Name *
+                {t.consultation.fullName}
               </div>
             </label>
             <input
@@ -91,7 +87,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="Your full name"
+              placeholder={t.consultation.namePlaceholder}
             />
           </div>
 
@@ -99,7 +95,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             <label className="block text-sm font-medium mb-2">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
-                Email Address *
+                {t.consultation.email}
               </div>
             </label>
             <input
@@ -108,7 +104,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="your.email@example.com"
+              placeholder={t.consultation.emailPlaceholder}
             />
           </div>
 
@@ -116,7 +112,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             <label className="block text-sm font-medium mb-2">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
-                Phone Number *
+                {t.consultation.phone}
               </div>
             </label>
             <input
@@ -125,7 +121,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="+52 624 123 4567"
+              placeholder={t.consultation.phonePlaceholder}
             />
           </div>
 
@@ -133,7 +129,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             <label className="block text-sm font-medium mb-2">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-primary" />
-                Preferred Consultation Date
+                {t.consultation.preferredDate}
               </div>
             </label>
             <input
@@ -148,7 +144,7 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
             <label className="block text-sm font-medium mb-2">
               <div className="flex items-center gap-2">
                 <MessageSquare className="w-4 h-4 text-primary" />
-                Tell us about your immigration needs
+                {t.consultation.message}
               </div>
             </label>
             <textarea
@@ -156,19 +152,19 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={4}
               className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
-              placeholder="What type of residency are you interested in? Any specific questions?"
+              placeholder={t.consultation.messagePlaceholder}
             />
           </div>
 
           {submitStatus === 'success' && (
             <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
-              ✓ Consultation request sent! We'll contact you within 24 hours.
+              {t.consultation.successMessage}
             </div>
           )}
 
           {submitStatus === 'error' && (
             <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
-              ✗ Something went wrong. Please try again or call us at 624 125 9640.
+              {t.consultation.errorMessage}
             </div>
           )}
 
@@ -178,14 +174,14 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               disabled={isSubmitting}
               className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 py-3 rounded-lg font-medium transition disabled:opacity-50"
             >
-              {isSubmitting ? 'Sending...' : 'Schedule Consultation'}
+              {isSubmitting ? t.consultation.sending : t.consultation.submit}
             </button>
             <button
               type="button"
               onClick={onClose}
               className="px-6 bg-muted hover:bg-muted/80 py-3 rounded-lg font-medium transition"
             >
-              Cancel
+              {t.consultation.cancel}
             </button>
           </div>
         </form>
@@ -195,6 +191,8 @@ function ConsultationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 }
 
 function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const t = useTranslation();
+
   if (!isOpen) return null;
 
   return (
@@ -202,8 +200,8 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
       <div className="bg-background rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <div className="sticky top-0 bg-background border-b p-6 flex justify-between items-start">
           <div>
-            <h3 className="text-2xl font-bold">Contact Us</h3>
-            <p className="text-sm text-muted-foreground mt-1">Los Cabos Immigration Services Office</p>
+            <h3 className="text-2xl font-bold">{t.hero.contact.title}</h3>
+            <p className="text-sm text-muted-foreground mt-1">{t.hero.contact.subtitle}</p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-muted rounded-lg transition">
             <X className="w-5 h-5" />
@@ -216,7 +214,7 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               <MapPin className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold mb-1">Office Location</h4>
+              <h4 className="font-semibold mb-1">{t.hero.contact.officeLocation}</h4>
               <p className="text-muted-foreground">
                 Blvd. Lázaro Cárdenas 1625<br />
                 Ampliación Juárez<br />
@@ -231,7 +229,7 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               <Phone className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h4 className="font-semibold mb-1">Phone</h4>
+              <h4 className="font-semibold mb-1">{t.hero.contact.phone}</h4>
               <a href="tel:+526241259640" className="text-primary hover:underline">
                 624 125 9640
               </a>
@@ -243,19 +241,19 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               <Clock className="w-6 h-6 text-primary" />
             </div>
             <div className="flex-1">
-              <h4 className="font-semibold mb-3">Office Hours</h4>
+              <h4 className="font-semibold mb-3">{t.hero.contact.officeHours}</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Monday - Friday</span>
-                  <span className="font-medium">8 AM – 3 PM MST</span>
+                  <span className="text-muted-foreground">{t.hero.contact.monFri}</span>
+                  <span className="font-medium">{t.hero.contact.monFriHours}</span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-muted-foreground">Saturday</span>
-                  <span className="font-medium text-destructive">Closed</span>
+                  <span className="text-muted-foreground">{t.hero.contact.saturday}</span>
+                  <span className="font-medium text-destructive">{t.hero.contact.closed}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-muted-foreground">Sunday</span>
-                  <span className="font-medium text-destructive">Closed</span>
+                  <span className="text-muted-foreground">{t.hero.contact.sunday}</span>
+                  <span className="font-medium text-destructive">{t.hero.contact.closed}</span>
                 </div>
               </div>
             </div>
@@ -268,7 +266,7 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
               rel="noopener noreferrer"
               className="block w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 rounded-lg font-medium text-center transition"
             >
-              Get Directions
+              {t.hero.contact.getDirections}
             </a>
           </div>
         </div>
@@ -278,7 +276,7 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
             onClick={onClose}
             className="w-full bg-muted hover:bg-muted/80 py-3 rounded-lg font-medium transition"
           >
-            Close
+            {t.hero.contact.close}
           </button>
         </div>
       </div>
@@ -287,6 +285,7 @@ function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
 }
 
 export function HeroSection({ onStartApplication }: HeroSectionProps) {
+  const t = useTranslation();
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [consultationModalOpen, setConsultationModalOpen] = useState(false);
 
@@ -294,7 +293,7 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
     <>
       <ContactModal isOpen={contactModalOpen} onClose={() => setContactModalOpen(false)} />
       <ConsultationModal isOpen={consultationModalOpen} onClose={() => setConsultationModalOpen(false)} />
-      
+
       <section className="relative bg-primary py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80" />
 
@@ -302,10 +301,10 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                Los Cabos<br />Immigration Services<br />INM Consultants
+                {t.hero.h1Line1}<br />{t.hero.h1Line2}<br />{t.hero.h1Line3}
               </h1>
               <p className="text-xl mb-8 text-white/90">
-                Expert assistance for temporary residency, permanent residency, and work permits in Cabo San Lucas
+                {t.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -313,14 +312,14 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
                   onClick={() => setConsultationModalOpen(true)}
                   className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6"
                 >
-                  Schedule Consultation
+                  {t.hero.scheduleConsultation}
                 </Button>
                 <Button
                   size="lg"
                   onClick={() => setContactModalOpen(true)}
                   className="bg-white/20 hover:bg-white/30 text-white font-semibold border-2 border-white/40 text-lg px-8 py-6"
                 >
-                  Contact Info
+                  {t.hero.contactInfo}
                 </Button>
               </div>
             </div>

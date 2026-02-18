@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { MapPin, Phone, Clock } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
 
 export function Footer() {
+  const t = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,56 +14,56 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
-              <img 
-                src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png" 
-                alt="Los Cabos Immigration Services" 
+              <img
+                src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png"
+                alt="Los Cabos Immigration Services"
                 className="h-8 w-auto"
               />
-              <span className="font-bold">Los Cabos Immigration Services</span>
+              <span className="font-bold">{t.header.brandName}</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Expert immigration services for Cabo San Lucas, Mexico
+              {t.footer.tagline}
             </p>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">Quick Links</h4>
+            <h4 className="font-bold mb-4 text-primary">{t.footer.quickLinks}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link href="/services" className="hover:text-primary transition">
-                  Services
+                  {t.footer.services}
                 </Link>
               </li>
               <li>
                 <Link href="/services/temporary-residency" className="hover:text-primary transition">
-                  Temporary Residency
+                  {t.footer.temporaryResidency}
                 </Link>
               </li>
               <li>
                 <Link href="/services/permanent-residency" className="hover:text-primary transition">
-                  Permanent Residency
+                  {t.footer.permanentResidency}
                 </Link>
               </li>
               <li>
                 <Link href="/services/work-permits" className="hover:text-primary transition">
-                  Work Permits
+                  {t.footer.workPermits}
                 </Link>
               </li>
               <li>
                 <Link href="/about/susana-rapini" className="hover:text-primary transition">
-                  About Susana
+                  {t.footer.aboutSusana}
                 </Link>
               </li>
               <li>
                 <Link href="/faq" className="hover:text-primary transition">
-                  FAQ
+                  {t.footer.faq}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">Contact</h4>
+            <h4 className="font-bold mb-4 text-primary">{t.footer.contact}</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
@@ -79,7 +81,7 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-2">
                 <Clock className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />
-                <p>Mon-Fri: 8 AM - 3 PM MST</p>
+                <p>{t.footer.hours}</p>
               </div>
             </div>
           </div>
@@ -88,17 +90,17 @@ export function Footer() {
         <div className="border-t border-border pt-8 text-sm text-muted-foreground">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <p>© {currentYear} Los Cabos Immigration Services. All rights reserved.</p>
+              <p>© {currentYear} {t.header.brandName}. {t.footer.copyright}</p>
               <p className="text-xs text-muted-foreground/70 mt-1">
-                To hire the architect of this website call{' '}
+                {t.footer.architectNote}{' '}
                 <a href="tel:+526121698328" className="hover:text-primary transition">
                   +52 612 169 8328
                 </a>
               </p>
             </div>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-primary transition">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition">Terms of Service</a>
+              <a href="#" className="hover:text-primary transition">{t.footer.privacyPolicy}</a>
+              <a href="#" className="hover:text-primary transition">{t.footer.termsOfService}</a>
             </div>
           </div>
         </div>

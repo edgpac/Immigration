@@ -8,6 +8,9 @@ import { Award, MapPin, Languages, GraduationCap, Users, Heart } from 'lucide-re
 export const metadata: Metadata = {
   title: 'Susana Rapini - Certified Translator & Immigration Consultant Cabo San Lucas',
   description: 'Meet Susana Rapini, certified translator for immigration consultant registered with INM. 15+ years experience in Mexican immigration law. Specialized in temporary/permanent residency and work permits in Los Cabos.',
+  alternates: {
+    canonical: 'https://www.loscabosimmigration.com/about/susana-rapini',
+  },
   openGraph: {
     title: 'Susana Rapini - Expert Immigration Consultant in Cabo San Lucas',
     description: 'Certified translator and INM-registered consultant specializing in Mexican immigration. 15+ years experience helping expatriates establish residency in Los Cabos.',

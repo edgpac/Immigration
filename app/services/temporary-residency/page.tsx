@@ -7,11 +7,16 @@ import { FinalCTASection } from '@/components/final-cta-section'
 import { Calendar, DollarSign, FileText, Clock, CheckCircle2, AlertCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Temporary Residency Mexico - Residente Temporal Cabo San Lucas | 1-4 Years',
-  description: 'Complete guide to Mexican temporary residency (residente temporal) in Cabo San Lucas. Requirements, costs, timeline, work permits. Licensed INM consultants. Apply today.',
+  title: {
+    absolute: 'Temporary Residency Cabo San Lucas 2025 | INM Specialist',
+  },
+  description: '2025: $1,620/mo income or $27,000 savings required. INM-registered specialist prepares your application and accompanies you to the Cabo INM appointment.',
+  alternates: {
+    canonical: 'https://www.loscabosimmigration.com/services/temporary-residency',
+  },
   openGraph: {
-    title: 'Temporary Residency Mexico - Expert Assistance in Cabo San Lucas',
-    description: 'Get your Mexican temporary resident visa with professional help. 1-4 year permits, work authorization available. INM-registered consultants.',
+    title: 'Temporary Residency Cabo San Lucas 2025 — INM-Registered Specialist',
+    description: '2025 requirements: $1,620/mo or $27K savings. INM-registered specialist handles your full application and attends your Cabo INM appointment with you.',
   },
 }
 

@@ -2,53 +2,32 @@
 
 import { Button } from './ui/button';
 import { Card } from './ui/card';
-import { Calendar, Home, Briefcase, RefreshCw, Shield, Lock } from 'lucide-react';
+import { Calendar, Home, Briefcase, RefreshCw, Lock } from 'lucide-react';
+import { useTranslation } from '@/hooks/use-translation';
 
 interface ServicesSectionProps {
-  onStartApplication: () => void;
+  onStartApplication?: () => void;
 }
 
 export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
-  const services = [
-    {
-      icon: Calendar,
-      title: 'Temporary Residency',
-      description: 'Valid for 1-4 years with optional work authorization. Perfect for retirees, remote workers, and those testing life in Mexico.',
-      points: ['1-4 year validity', 'Renewable process', 'Work permit available'],
-    },
-    {
-      icon: Home,
-      title: 'Permanent Residency',
-      description: 'Live in Mexico indefinitely with full work rights. No renewals needed after approval.',
-      points: ['No expiration date', 'Automatic work authorization', 'Path to citizenship'],
-    },
-    {
-      icon: Briefcase,
-      title: 'Work Permits & Employment',
-      description: 'Legal authorization for foreign workers. We handle employer registration and employee documentation.',
-      points: ['Employer sponsorship support', 'Job offer documentation', 'INM registration'],
-    },
-    {
-      icon: RefreshCw,
-      title: 'Renewals & Updates',
-      description: 'Keep your status current without penalties. We track deadlines and handle paperwork.',
-      points: ['30-day reminder system', 'Address change notifications', 'Avoid fines & delays'],
-    },
-  ];
+  const t = useTranslation();
+  const handleStartApplication = onStartApplication ?? (() => { window.location.href = '/'; });
+
+  const icons = [Calendar, Home, Briefcase, RefreshCw];
 
   return (
     <section id="services" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Our Immigration Services</h2>
+          <h2 className="text-4xl font-bold mb-4">{t.services.title}</h2>
           <p className="text-xl text-muted-foreground">
-            Simplified processes for living and working in Mexico
+            {t.services.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {services.map((service, index) => {
-            const Icon = service.icon;
+          {t.services.items.map((service, index) => {
+            const Icon = icons[index];
             return (
               <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4 mb-6">
@@ -77,20 +56,20 @@ export function ServicesSection({ onStartApplication }: ServicesSectionProps) {
         {/* Single Start Application Button */}
         <div className="text-center">
           <Button
-            onClick={onStartApplication}
+            onClick={handleStartApplication}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-12 py-6"
           >
-            Start Application
+            {t.services.startApplication}
           </Button>
           <p className="text-sm text-muted-foreground mt-4">
-            Choose your service type in the next step
+            {t.services.chooseNextStep}
           </p>
-          
+
           {/* Security Badge */}
           <div className="flex items-center justify-center gap-2 mt-6 text-xs text-muted-foreground">
             <Lock className="w-3 h-3 text-green-600" />
-            <span>Secure & Confidential - Protected by SSL Encryption</span>
+            <span>{t.services.secureLabel}</span>
           </div>
         </div>
       </div>

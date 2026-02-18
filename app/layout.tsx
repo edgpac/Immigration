@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Marcellus } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LanguageProvider } from '@/contexts/language-context'
 import './globals.css'
 
 const geistSans = Geist({ 
@@ -28,11 +29,10 @@ const SITE_URL = 'https://www.loscabosimmigration.com';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Los Cabos Immigration Services | Mexican Residency & Work Permits - Cabo San Lucas',
+    default: 'Los Cabos Immigration Services | INM-Registered | Cabo San Lucas',
     template: '%s | Los Cabos Immigration Services'
   },
-  // ✅ FIXED: Shortened from 290 to 188 characters for better search display
-  description: 'Licensed immigration consultant in Cabo San Lucas. Temporary & permanent residency, work permits, visa renewals. INM-registered, 15+ years experience. Bilingual support.',
+  description: 'INM-registered specialist Susana Rapini manages your Mexican residency from start to finish. 15+ years, 3,000+ approvals. Free consultation — call today.',
   keywords: [
     // Core Services
     'Cabo San Lucas immigration',
@@ -292,7 +292,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${marcellus.variable} font-sans antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

@@ -9,6 +9,9 @@ import { Briefcase, Building2, FileText, Clock, CheckCircle2, AlertTriangle } fr
 export const metadata: Metadata = {
   title: 'Work Permits Mexico - Employment Authorization Cabo San Lucas | Foreign Workers',
   description: 'Complete guide to Mexican work permits and employment authorization in Cabo San Lucas. Employer sponsorship, INM registration, visa processing. Licensed consultants.',
+  alternates: {
+    canonical: 'https://www.loscabosimmigration.com/services/work-permits',
+  },
   openGraph: {
     title: 'Work Permits Mexico - Expert Employment Authorization in Cabo',
     description: 'Get legal work authorization in Mexico with professional help. Employer registration, employee visa processing. INM-registered consultants.',

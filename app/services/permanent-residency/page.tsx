@@ -7,11 +7,16 @@ import { FinalCTASection } from '@/components/final-cta-section'
 import { Home, DollarSign, Infinity, Clock, CheckCircle2, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Permanent Residency Mexico - Residente Permanente Cabo San Lucas | No Expiration',
-  description: 'Complete guide to Mexican permanent residency (residente permanente) in Cabo San Lucas. Lifetime status, automatic work rights, no renewals. Licensed INM consultants.',
+  title: {
+    absolute: 'Mexican Permanent Residency 2025 | No Renewals | Cabo Expert',
+  },
+  description: 'No renewals, automatic work rights, path to citizenship. 2025: $2,700/mo or $54K savings required. INM-registered specialist in Cabo San Lucas — free consultation.',
+  alternates: {
+    canonical: 'https://www.loscabosimmigration.com/services/permanent-residency',
+  },
   openGraph: {
-    title: 'Permanent Residency Mexico - Expert Assistance in Cabo San Lucas',
-    description: 'Get Mexican permanent resident status with professional help. Lifetime validity, work authorization included. INM-registered consultants.',
+    title: 'Mexican Permanent Residency 2025 — No Renewals, Automatic Work Rights',
+    description: 'Lifetime residency with no renewals and automatic work rights. 2025: $2,700/mo or $54K savings. INM-registered specialist in Cabo handles everything.',
   },
 }
 

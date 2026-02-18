@@ -5,6 +5,8 @@ import { Button } from './ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/hooks/use-translation';
 
 interface HeaderProps {
   onStartApplication?: () => void;
@@ -16,6 +18,8 @@ export function Header({ onStartApplication }: HeaderProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const isHomepage = pathname === '/';
+  const { language, setLanguage } = useLanguage();
+  const t = useTranslation();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -43,87 +47,96 @@ export function Header({ onStartApplication }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <img 
-              src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png" 
-              alt="Los Cabos Immigration Services" 
+            <img
+              src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png"
+              alt="Los Cabos Immigration Services"
               className="h-10 w-auto"
             />
-            <span className="font-bold text-lg hidden sm:inline">Los Cabos Immigration Services</span>
+            <span className="font-bold text-lg hidden sm:inline">{t.header.brandName}</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             {/* Services Dropdown - CLICK BASED */}
             <div className="relative" ref={dropdownRef}>
-              <button 
+              <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center gap-1 text-sm hover:text-primary transition"
               >
-                Services
+                {t.header.services}
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
-                  <Link 
-                    href="/services" 
+                  <Link
+                    href="/services"
                     className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="font-semibold">Services Overview</div>
-                    <div className="text-xs text-muted-foreground">Overview of our services</div>
+                    <div className="font-semibold">{t.header.servicesOverview}</div>
+                    <div className="text-xs text-muted-foreground">{t.header.servicesOverviewDesc}</div>
                   </Link>
                   <div className="border-t border-border my-1" />
-                  <Link 
-                    href="/services/temporary-residency" 
+                  <Link
+                    href="/services/temporary-residency"
                     className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="font-semibold">Temporary Residency</div>
-                    <div className="text-xs text-muted-foreground">1-4 year permits</div>
+                    <div className="font-semibold">{t.header.temporaryResidency}</div>
+                    <div className="text-xs text-muted-foreground">{t.header.temporaryResidencyDesc}</div>
                   </Link>
-                  <Link 
-                    href="/services/permanent-residency" 
+                  <Link
+                    href="/services/permanent-residency"
                     className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="font-semibold">Permanent Residency</div>
-                    <div className="text-xs text-muted-foreground">Lifetime status</div>
+                    <div className="font-semibold">{t.header.permanentResidency}</div>
+                    <div className="text-xs text-muted-foreground">{t.header.permanentResidencyDesc}</div>
                   </Link>
-                  <Link 
-                    href="/services/work-permits" 
+                  <Link
+                    href="/services/work-permits"
                     className="block px-4 py-3 text-sm hover:bg-muted transition"
                     onClick={() => setServicesOpen(false)}
                   >
-                    <div className="font-semibold">Work Permits</div>
-                    <div className="text-xs text-muted-foreground">Employment authorization</div>
+                    <div className="font-semibold">{t.header.workPermits}</div>
+                    <div className="text-xs text-muted-foreground">{t.header.workPermitsDesc}</div>
                   </Link>
                 </div>
               )}
             </div>
 
             <button onClick={() => scrollToSection('how-it-works')} className="text-sm hover:text-primary transition">
-              How It Works
+              {t.header.howItWorks}
             </button>
-            
+
             <Link href="/about/susana-rapini" className="text-sm hover:text-primary transition">
-              About Susana
+              {t.header.aboutSusana}
             </Link>
-            
+
             <Link href="/faq" className="text-sm hover:text-primary transition">
-              FAQ
+              {t.header.faq}
             </Link>
+
+            {/* Language Toggle */}
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+              className="text-sm font-semibold border border-border rounded px-2 py-1 hover:bg-muted transition min-w-[36px]"
+              aria-label={language === 'en' ? 'Switch to Spanish' : 'Switch to English'}
+            >
+              {t.header.langToggle}
+            </button>
           </nav>
 
           <div className="hidden md:block">
             {onStartApplication ? (
               <Button onClick={onStartApplication} className="bg-primary hover:bg-primary/90">
-                Start Application
+                {t.header.startApplication}
               </Button>
             ) : (
               <Link href="/#contact">
                 <Button className="bg-primary hover:bg-primary/90">
-                  Contact Us
+                  {t.header.contactUs}
                 </Button>
               </Link>
             )}
@@ -141,59 +154,66 @@ export function Header({ onStartApplication }: HeaderProps) {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="md:hidden pb-4 space-y-3">
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="block w-full text-left py-2 text-sm hover:text-primary font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >
-              All Services
+              {t.header.allServices}
             </Link>
-            <Link 
-              href="/services/temporary-residency" 
+            <Link
+              href="/services/temporary-residency"
               className="block w-full text-left py-2 text-sm hover:text-primary pl-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              → Temporary Residency
+              → {t.header.temporaryResidency}
             </Link>
-            <Link 
-              href="/services/permanent-residency" 
+            <Link
+              href="/services/permanent-residency"
               className="block w-full text-left py-2 text-sm hover:text-primary pl-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              → Permanent Residency
+              → {t.header.permanentResidency}
             </Link>
-            <Link 
-              href="/services/work-permits" 
+            <Link
+              href="/services/work-permits"
               className="block w-full text-left py-2 text-sm hover:text-primary pl-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              → Work Permits
+              → {t.header.workPermits}
             </Link>
             <button onClick={() => scrollToSection('how-it-works')} className="block w-full text-left py-2 text-sm hover:text-primary">
-              How It Works
+              {t.header.howItWorks}
             </button>
-            <Link 
-              href="/about/susana-rapini" 
+            <Link
+              href="/about/susana-rapini"
               className="block w-full text-left py-2 text-sm hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About Susana
+              {t.header.aboutSusana}
             </Link>
-            <Link 
-              href="/faq" 
+            <Link
+              href="/faq"
               className="block w-full text-left py-2 text-sm hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
-              FAQ
+              {t.header.faq}
             </Link>
+            {/* Mobile Language Toggle */}
+            <button
+              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+              className="block w-full text-left py-2 text-sm font-semibold hover:text-primary border-t border-border pt-3"
+            >
+              {language === 'en' ? '🌐 Switch to Español' : '🌐 Switch to English'}
+            </button>
             {onStartApplication ? (
               <Button onClick={onStartApplication} className="w-full bg-primary hover:bg-primary/90">
-                Start Application
+                {t.header.startApplication}
               </Button>
             ) : (
               <Link href="/#contact" className="block" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="w-full bg-primary hover:bg-primary/90">
-                  Contact Us
+                  {t.header.contactUs}
                 </Button>
               </Link>
             )}
