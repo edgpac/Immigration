@@ -121,7 +121,7 @@ export function Header({ onStartApplication }: HeaderProps) {
             {/* Language Toggle */}
             <button
               onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
-              className="text-sm font-semibold border border-border rounded px-2 py-1 hover:bg-muted transition min-w-[36px]"
+              className="lang-toggle-btn py-1 px-4"
               aria-label={language === 'en' ? 'Switch to Spanish' : 'Switch to English'}
             >
               {t.header.langToggle}

@@ -94,4 +94,46 @@
   [class*="bg-primary"] button {
     color: white !important;
   }
+
+  /* Language toggle button - sliding burgundy fill on hover */
+  .lang-toggle-btn {
+    width: 9em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 600;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    background: hsl(var(--background));
+    color: hsl(var(--primary));
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    transition: color 0.5s ease;
+  }
+
+  .lang-toggle-btn::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+
+  .lang-toggle-btn:hover::before,
+  .lang-toggle-btn:active::before {
+    width: 9em;
+  }
+
+  .lang-toggle-btn:hover,
+  .lang-toggle-btn:active {
+    color: white;
+  }
 }
