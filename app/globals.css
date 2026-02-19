@@ -97,7 +97,7 @@
 
   /* Language toggle button - sliding burgundy fill on hover */
   .lang-toggle-btn {
-    width: 9em;
+    width: 4.5em;
     border-radius: 30em;
     font-size: 15px;
     font-family: inherit;
@@ -129,7 +129,7 @@
 
   .lang-toggle-btn:hover::before,
   .lang-toggle-btn:active::before {
-    width: 9em;
+    width: 4.5em;
   }
 
   .lang-toggle-btn:hover,
