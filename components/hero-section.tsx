@@ -334,6 +334,7 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
                   width={800}
                   height={600}
                   priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto object-cover"
                 />
               </div>

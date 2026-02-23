@@ -94,7 +94,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p>© {currentYear} {t.header.brandName}. {t.footer.copyright}</p>
-              <p className="text-xs text-muted-foreground/70 mt-1">
+              <p className="text-xs text-muted-foreground mt-1">
                 {t.footer.architectNote}{' '}
                 <a href="tel:+526121698328" className="hover:text-primary transition">
                   +52 612 169 8328

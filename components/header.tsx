@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/language-context';
 import { useTranslation } from '@/hooks/use-translation';
@@ -47,12 +48,13 @@ export function Header({ onStartApplication }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" aria-label={t.header.brandName} className="flex items-center gap-3 hover:opacity-80 transition">
-            <img
+            <Image
               src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png"
               alt=""
               width={160}
               height={40}
               className="h-10 w-auto"
+              priority
             />
             <span className="font-bold text-lg hidden sm:inline" aria-hidden="true">{t.header.brandName}</span>
           </Link>
