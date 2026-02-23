@@ -13,13 +13,15 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
+            <Link href="/" aria-label={t.header.brandName} className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
               <img
                 src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png"
-                alt="Los Cabos Immigration Services"
+                alt=""
+                width={160}
+                height={32}
                 className="h-8 w-auto"
               />
-              <span className="font-bold">{t.header.brandName}</span>
+              <span className="font-bold" aria-hidden="true">{t.header.brandName}</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               {t.footer.tagline}
@@ -27,7 +29,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">{t.footer.quickLinks}</h4>
+            <h3 className="font-bold mb-4 text-primary">{t.footer.quickLinks}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link href="/services" className="hover:text-primary transition">
@@ -63,7 +65,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-primary">{t.footer.contact}</h4>
+            <h3 className="font-bold mb-4 text-primary">{t.footer.contact}</h3>
             <div className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" />

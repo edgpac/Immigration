@@ -2,10 +2,18 @@
 export default {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './components/*.{ts,tsx}',
+    './components/ui/button.tsx',
+    './components/ui/card.tsx',
+    './components/ui/input.tsx',
+    './components/ui/label.tsx',
+    './components/ui/radio-group.tsx',
+    './components/ui/select.tsx',
+    './components/ui/toast.tsx',
+    './components/ui/toaster.tsx',
+    './contexts/**/*.{ts,tsx}',
+    './hooks/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {

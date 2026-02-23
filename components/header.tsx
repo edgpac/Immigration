@@ -46,13 +46,15 @@ export function Header({ onStartApplication }: HeaderProps) {
     <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
+          <Link href="/" aria-label={t.header.brandName} className="flex items-center gap-3 hover:opacity-80 transition">
             <img
               src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png"
-              alt="Los Cabos Immigration Services"
+              alt=""
+              width={160}
+              height={40}
               className="h-10 w-auto"
             />
-            <span className="font-bold text-lg hidden sm:inline">{t.header.brandName}</span>
+            <span className="font-bold text-lg hidden sm:inline" aria-hidden="true">{t.header.brandName}</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -146,6 +148,8 @@ export function Header({ onStartApplication }: HeaderProps) {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

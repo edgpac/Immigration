@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from './ui/button';
 import { X, MapPin, Phone, Clock, Mail, User, Calendar, MessageSquare } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
@@ -327,9 +328,12 @@ export function HeroSection({ onStartApplication }: HeroSectionProps) {
             {/* Right column - Image with Gold Border */}
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-2xl border-2 border-yellow-500/30">
-                <img
+                <Image
                   src="/immi.png"
                   alt="Beautiful Cabo San Lucas beach at sunset"
+                  width={800}
+                  height={600}
+                  priority
                   className="w-full h-auto object-cover"
                 />
               </div>
