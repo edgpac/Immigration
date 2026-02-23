@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Clock } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
 
@@ -14,7 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <Link href="/" aria-label={t.header.brandName} className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png"
                 alt=""
                 width={160}
