@@ -62,12 +62,28 @@ const inmOfficeSchema = {
   url: 'https://www.inm.gob.mx',
 }
 
+const inmPageSpeakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://www.loscabosimmigration.com/inm-cabo-san-lucas',
+  name: 'INM Cabo San Lucas Office | Address, Hours & Appointments',
+  description: 'INM office in Cabo San Lucas: Blvd. Lázaro Cárdenas 1625. Hours Mon–Fri 9AM–3PM. Phone 624 143 9859.',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2', '.inm-speakable-summary'],
+  },
+}
+
 export default function InmCaboSanLucasPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(inmOfficeSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(inmPageSpeakableSchema) }}
       />
       <div className="min-h-screen bg-background">
         <Header />
@@ -141,7 +157,7 @@ export default function InmCaboSanLucasPage() {
                   <CalendarDays className="w-7 h-7 text-primary flex-shrink-0" />
                   <h2 className="font-heading text-3xl font-bold">How to Book an INM Appointment</h2>
                 </div>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="inm-speakable-summary text-muted-foreground leading-relaxed mb-6">
                   Appointments at the Cabo San Lucas INM office are required for most procedures — walk-ins are rarely accepted. The official appointment system is managed online through the INM national portal.
                 </p>
 

@@ -17,9 +17,66 @@ export const metadata: Metadata = {
   },
 }
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Susana Rapini',
+  jobTitle: 'Immigration Consultant & Certified Translator',
+  description: 'INM-registered immigration consultant and certified translator with 15+ years of experience helping expatriates obtain temporary residency, permanent residency, and work permits in Los Cabos, Mexico.',
+  url: 'https://www.loscabosimmigration.com/about/susana-rapini',
+  image: 'https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png',
+  knowsLanguage: ['English', 'Spanish', 'Italian'],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Professional Registration',
+      name: 'INM Registered Immigration Consultant',
+      recognizedBy: {
+        '@type': 'GovernmentOrganization',
+        name: 'Instituto Nacional de Migración',
+        url: 'https://www.gob.mx/inm',
+      },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Certification',
+      name: 'Certified Legal Translator',
+    },
+  ],
+  worksFor: {
+    '@type': 'ProfessionalService',
+    name: 'Los Cabos Immigration Services',
+    url: 'https://www.loscabosimmigration.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Blvd. Lázaro Cárdenas 1625',
+      addressLocality: 'Cabo San Lucas',
+      addressRegion: 'Baja California Sur',
+      postalCode: '23469',
+      addressCountry: 'MX',
+    },
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Cabo San Lucas',
+    addressRegion: 'Baja California Sur',
+    addressCountry: 'MX',
+  },
+  telephone: '+52-624-125-9640',
+  email: 'caboresidencycard@outlook.com',
+  sameAs: [
+    'https://www.facebook.com/loscabosimmigration',
+    'https://www.instagram.com/loscabosimmigration',
+  ],
+}
+
 export default function SusanaRapiniPage() {
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <Header />
       
       {/* Hero */}

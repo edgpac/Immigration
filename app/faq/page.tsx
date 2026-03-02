@@ -242,12 +242,28 @@ const faqSchema = {
   ],
 };
 
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  url: 'https://www.loscabosimmigration.com/faq',
+  name: 'Mexico Immigration FAQ 2025 | INM-Registered Specialist',
+  description: '2025 answers on income thresholds, processing times, document checklists, and INM procedures — answered by INM-registered specialist Susana Rapini in Cabo.',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', 'h2', '.faq-speakable-intro'],
+  },
+}
+
 export default function FAQPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <div className="min-h-screen bg-background">
       <Header />
@@ -281,7 +297,7 @@ export default function FAQPage() {
                 <Search className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <h2 className="font-heading text-2xl font-bold mb-4">Find Your Answer</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                  <p className="faq-speakable-intro text-muted-foreground leading-relaxed mb-4">
                     This comprehensive FAQ covers the most common questions we receive about Mexican immigration, residency processes, work permits, and visa requirements. We've organized answers by topic to help you quickly find the information you need.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
@@ -302,14 +318,14 @@ export default function FAQPage() {
                 <div className="bg-card border rounded-lg p-6">
                   <h3 className="font-bold text-xl mb-3 text-primary">Which Mexican consulate should I use?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    You can apply at any Mexican consulate, but most applicants use the consulate nearest their legal residence or where they can most easily schedule an appointment. Popular consulates for Americans include San Diego (typically fastest appointments), Los Angeles, Phoenix, Houston, Miami, and Chicago. Each consulate has slightly different procedures and document requirements, so check their specific website. Some consulates like San Diego process applications same-day, while others take 1-2 weeks. If you live abroad temporarily, you may be able to use that country's consulate, but confirm eligibility first.
+                    You can apply at any Mexican consulate, but most applicants use the consulate nearest their legal residence or where they can most easily schedule an appointment. Popular consulates for Americans include San Diego (typically fastest appointments), Los Angeles, Phoenix, Houston, Miami, and Chicago. Each consulate has slightly different procedures and document requirements, so check their <a href="https://embamex.sre.gob.mx/sre/index.php/directorio-consular" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">specific website</a>. Some consulates like San Diego process applications same-day, while others take 1-2 weeks. If you live abroad temporarily, you may be able to use that country's consulate, but confirm eligibility first.
                   </p>
                 </div>
 
                 <div className="bg-card border rounded-lg p-6">
                   <h3 className="font-bold text-xl mb-3 text-primary">Can I apply for Mexican residency from inside Mexico?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Generally, no. You must apply at a Mexican consulate in your home country or country of legal residence. The only exceptions are: (1) immediate family members of Mexican citizens or permanent residents can apply at INM offices in Mexico, (2) those with certain humanitarian visas, or (3) conversion from temporary to permanent residency after 4 years. Tourist visa holders cannot convert to residency status from within Mexico—attempting this results in automatic denial and potential immigration violations. If you're in Mexico on a tourist visa and want residency, you must leave Mexico and apply at a consulate abroad.
+                    Generally, no. You must apply at a Mexican consulate in your home country or country of legal residence. The only exceptions are: (1) immediate family members of Mexican citizens or permanent residents can apply at <a href="https://www.inm.gob.mx" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">INM offices</a> in Mexico, (2) those with certain humanitarian visas, or (3) conversion from temporary to permanent residency after 4 years. Tourist visa holders cannot convert to residency status from within Mexico—attempting this results in automatic denial and potential immigration violations. If you're in Mexico on a tourist visa and want residency, you must leave Mexico and apply at a consulate abroad.
                   </p>
                 </div>
 
@@ -369,7 +385,7 @@ export default function FAQPage() {
                 <div className="bg-card border rounded-lg p-6">
                   <h3 className="font-bold text-xl mb-3 text-primary">Can I start a business in Mexico with temporary residency?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Yes, but you need work authorization on your temporary resident card. Starting a business is considered "economic activity" requiring work permission, even if you're self-employed. The process: obtain temporary residency with work authorization, establish your business legally (register with SAT, obtain RFC tax ID), and ensure your resident card shows work permission. You can own a business without work authorization (passive ownership with hired management), but active involvement in operations requires permission. Permanent residents can start and operate businesses freely without additional authorization. Consult with both an immigration specialist and Mexican business attorney when establishing a company.
+                    Yes, but you need work authorization on your temporary resident card. Starting a business is considered "economic activity" requiring work permission, even if you're self-employed. The process: obtain temporary residency with work authorization, establish your business legally (register with <a href="https://www.sat.gob.mx" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">SAT</a>, obtain RFC tax ID), and ensure your resident card shows work permission. You can own a business without work authorization (passive ownership with hired management), but active involvement in operations requires permission. Permanent residents can start and operate businesses freely without additional authorization. Consult with both an immigration specialist and Mexican business attorney when establishing a company.
                   </p>
                 </div>
 
@@ -414,7 +430,7 @@ export default function FAQPage() {
                 <div className="bg-card border rounded-lg p-6">
                   <h3 className="font-bold text-xl mb-3 text-primary">Will I have access to Mexican healthcare as a resident?</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Temporary and permanent residents can enroll in IMSS (Mexican Social Security healthcare) by paying monthly premiums. IMSS provides comprehensive coverage at government facilities for a fraction of US healthcare costs (typically $300-500 USD annually for individuals). Alternatively, many residents use private health insurance or pay out-of-pocket—Mexican private healthcare is high quality and affordable compared to the United States. Private consultations run $30-80 USD, and procedures cost 50-70% less than US equivalents. Some US Medicare Advantage plans offer limited coverage in Mexico, but traditional Medicare doesn't cover services outside the US. Most expatriates combine IMSS enrollment with supplemental private insurance or medical tourism policies.
+                    Temporary and permanent residents can enroll in <a href="https://www.imss.gob.mx" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">IMSS (Mexican Social Security healthcare)</a> by paying monthly premiums. IMSS provides comprehensive coverage at government facilities for a fraction of US healthcare costs (typically $300-500 USD annually for individuals). Alternatively, many residents use private health insurance or pay out-of-pocket—Mexican private healthcare is high quality and affordable compared to the United States. Private consultations run $30-80 USD, and procedures cost 50-70% less than US equivalents. Some US Medicare Advantage plans offer limited coverage in Mexico, but traditional Medicare doesn't cover services outside the US. Most expatriates combine IMSS enrollment with supplemental private insurance or medical tourism policies.
                   </p>
                 </div>
 

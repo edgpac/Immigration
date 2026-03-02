@@ -215,6 +215,26 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Los Cabos Immigration Services",
+              "url": SITE_URL,
+              "description": "INM-registered immigration consultancy in Cabo San Lucas. Temporary residency, permanent residency, and work permits for expatriates in Mexico.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": `${SITE_URL}/faq?q={search_term_string}`
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Los Cabos Immigration Services",
               "image": "https://res.cloudinary.com/dgixosra8/image/upload/v1763260298/Edg_3_fdbyxd.png",
@@ -252,6 +272,13 @@ export default function RootLayout({
                   "longitude": "-109.9167"
                 },
                 "geoRadius": "50000"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "3000",
+                "bestRating": "5",
+                "worstRating": "1"
               },
               "sameAs": [
                 "https://www.facebook.com/loscabosimmigration",
